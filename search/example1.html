@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="http://goisas.nic.in/content/scripts/custom_result_jsversion.js"></script>
+<script src="http://goisas.nic.in/content/scripts/auto_jsversion.js"> </script>
+<link type="text/css" href="http://goisas.nic.in/content/scripts/jquery.1.8.7/themes/base/jquery.ui.all.css" rel="stylesheet">
+<link href="http://goisas.nic.in/content/css/en/custom_result.css" rel="stylesheet" type="text/css">
+<script>
+var currentKey=0;
+settings = new Array();
+settings["searchServer"] = "http://goisearch.gov.in"; 
+settings["textBoxId"] = "q"; 
+settings["callBackFunction"]="callBack";
+loadSuggestionControls(settings); 
+
+function callBack()
+{
+	settings["q"]=document.getElementById('search_key').value;
+	settings["count"] = "10";        
+    settings["site"] = "india.gov.in";
+	loadResultControls(settings);
+}
+
+settings = new Array();
+settings["searchServer"] = "http://goisearch.gov.in";
+settings["textBoxId"] = "search_key";
+settings["q"]="";
+settings["site"] = "india.gov.in";
+loadResultControls(settings);
+
+function modifySettings(key1)
+{
+	  if(document.getElementById('search_key').value != null){
+            settings[key1]=document.getElementById('search_key').value;    
+    		settings["count"] = "10";
+        	settings["site"] = "india.gov.in";
+            loadResultControls(settings);
+		}
+		hideAutoComplete();
+}
+</script>
+</head>
+
+<body>
+	<input type="text" name="search_key" id="search_key" onkeyup="autoComplete()" autocomplete="off"/>
+
+	<input type="button" value="Search" onclick="modifySettings('q');" >	
+		<div id="auto_suggesion" style=" width:400px;"></div>
+	<!--This Div will be used for showing results -->
+	<div id="result_area" align="left"></div>		
+	<!-- AUTO SUGGEST SAME PAGE-->
+</body>    
+</html>
