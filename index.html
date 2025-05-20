@@ -1066,13 +1066,27 @@ body {
 
 </style>
   <!-- carousel img adjust -->
-  <style>
+ <style>
+  .carousel-img {
+    width: 100%;
+    max-height: 650px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
     .carousel-img {
-      height: 650px; /* Adjust this value to change image height */
-      object-fit: cover; /* Keeps aspect ratio, crops if needed */
+      max-height: 400px; /* Smaller height for tablets/small desktops */
     }
-  </style>
-<!-- carousel img adjust -->
+  }
+
+  @media (max-width: 480px) {
+    .carousel-img {
+      max-height: 250px; /* Smaller height for mobile screens */
+    }
+  }
+	 
+</style>
 </head>
 <body>
 
