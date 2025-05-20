@@ -1,0 +1,219 @@
+<html>
+<body bgcolor="#FFFFFF">
+
+<script type="text/javascript">
+
+/***********************************************
+* Cross browser Marquee II- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+
+var delayb4scroll=2000 //Specify initial delay before marquee starts to scroll on page (2000=2 seconds)
+var marqueespeed=2 //Specify marquee scroll speed (larger is faster 1-10)
+var pauseit=1 //Pause marquee onMousever (0=no. 1=yes)?
+
+////NO NEED TO EDIT BELOW THIS LINE////////////
+
+var copyspeed=marqueespeed
+var pausespeed=(pauseit==0)? copyspeed: 0
+var actualheight=''
+
+function scrollmarquee(){
+if (parseInt(cross_marquee.style.top)>(actualheight*(-1)+8)) //if scroller hasn't reached the end of its height
+cross_marquee.style.top=parseInt(cross_marquee.style.top)-copyspeed+"px" //move scroller upwards
+else //else, reset to original position
+cross_marquee.style.top=parseInt(marqueeheight)+8+"px"
+}
+
+function initializemarquee(){
+cross_marquee=document.getElementById("vmarquee")
+cross_marquee.style.top=0
+marqueeheight=document.getElementById("marqueecontainer").offsetHeight
+actualheight=cross_marquee.offsetHeight //height of marquee content (much of which is hidden from view)
+if (window.opera || navigator.userAgent.indexOf("Netscape/7")!=-1){ //if Opera or Netscape 7x, add scrollbars to scroll and exit
+cross_marquee.style.height=marqueeheight+"px"
+cross_marquee.style.overflow="scroll"
+return
+}
+setTimeout('lefttime=setInterval("scrollmarquee()",50)', delayb4scroll)
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initializemarquee, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initializemarquee)
+else if (document.getElementById)
+window.onload=initializemarquee
+</script>
+<script>
+.my_class_name {
+	margin: 0 auto;
+	border: 10px outset #ddd;
+}
+</script>
+
+
+
+
+
+
+<div id="marqueecontainer" onmouseover="copyspeed=pausespeed" onmouseout="copyspeed=marqueespeed">
+<div id="vmarquee" style="position: absolute; width: 90%;" >
+<br><br>
+ <p align="justify">
+ 
+ <a href="pdf/ECCE_Advertisement_12_6_2024.pdf" target="_blank" ><font color="black">Advertisement for 6 month Certificate Course in Early Childhood Care and Education at North East Regional Institute of Education, Shillong.For details click here.</font></a><img src="image/home/new.gif" /><br> 
+</P>
+ 
+ <a href="pdf/DCGC Course_29_11_23.pdf" target="_blank" ><font color="black">List of candidates to appear for Selection Test of DCGC 2024.For details click here.</font></a><img src="image/home/new.gif" /><br> 
+</P>
+
+ <a href="pdf/Certificate_Course_in_Early_Childhood_Care_and_Education.pdf" target="_blank" ><font color="black">Applications are invited from DIET/SCERT faculty, ICDS Officials, persons from NGOs,Nursery Teacher Training Institutions and Schools and private candidates from North East Region for 6 month Certificate Course in Early Childhood Care and Education.For details click here.</font></a><br> 
+</P>
+ 
+ <a href="pdf/Auction_Sale_for_Disposal_of_standing_Trees_Pine.pdf" target="_blank" ><font color="black">Auction Sale for Disposal of standing trees (Pine) on "as is where is Basis" at NERIE, Umiam.For details click here.</font></a><br> 
+</P>
+ 
+ <a href="pdf/Bilingual_notice_cee_2023.pdf" target="_blank" ><font color="black"> Admission to Various Education Programmes of RIEs.For details click here (Bilingual).</font></a><img src="image/home/new.gif" /><br> 
+</P>
+
+ <a href="pdf/Result19_12_2022.pdf" target="_blank" ><font color="black">Result of walk-in-interview held on 19th December 2022 for appointment of Two (2) JPF  on contractual basis in NERIE, Umiam.For details click here.</font>><br> 
+</P>
+ 
+ <a href="pdf/dcgc_7_12_2022.pdf" target="_blank" ><font color="black">List of candidates for DCGC 2023 Selection Test.For details Click here.</font></a><br> 
+</P>
+ 
+ <a href="pdf/Advertisement_ECCE_4_8_22.pdf" target="_blank" ><font color="black">Applications are invited from DIET/ SCERT faculty members, persons from NGOs working with Pre Schoolers, Nursery Teacher Training Institutes, School Teachers, and private candidates from North East Region for 6 month Certificate Course in Early childhood Care and Education..For details Click here.</font></a><br> 
+</P>
+ 
+ <a href="pdf/Selected Candidates_CA_June2022.pdf" target="_blank" ><font color="black">Result of walk-in-interview held on 22nd June 2022 for appointment of Computer Assistant on contractual basis in NERIE, Umiam.For details Click here.</font></a><br> 
+</P>
+ 
+ <a href="pdf/Selected Candidates_JPF_June_2022.pdf" target="_blank" ><font color="black">Result of walk-in-interview held on 21st June 2022 for appointment of Junior Proiect Fellow on contractual basis in NERIE, Umiam.For details Click here.</font></a><br> 
+</P>
+ 
+ <a href="pdf/Result_engineer.pdf" target="_blank" ><font color="black">Result of walk-in-interview held on 02 nd June, 2022 for appointment of Engineer Grade-II on contractual basis in NERIE,Umiam.For details Click here.</font></a><br> 
+</P>
+ 
+ <a href="pdf/Result_producer.pdf" target="_blank" ><font color="black">Result of walk-in-interview held on 02 nd June, 2022 for appointment of Producer Grade-II on contractual basis in NERIE,Umiam.For details Click here.</font></a><br> 
+</P>
+ 
+ <a href="pdf/revised_result_DCGC.pdf" target="_blank" ><font color="black">Revised result of the Diploma Course in Guidance and Counselling 2021.For details Click here.</font></a><br> 
+</P>
+ 
+  <a href="pdf/Result_DCGC_2021.pdf" target="_blank" ><font color="black">Result of the Diploma Course in Guidance and Counselling 2021.For details Click here.</font></a>
+</P>
+ 
+ <a href="pdf/Admission 2022-23.pdf" target="_blank" ><font color="black">Guidelines for processing the application for B.Ed (2 years) admission in the session 2022-2023.For details Click here.</font></a><br>
+</P>
+
+  <a href="pdf/Result_Asst_Librarian.pdf" target="_blank" ><font color="black">Result of walk-in-intertview held on 04th April 2022 for appointment of Assistant Librarian on contractual basis in NERIE Umiam.For details Click here.</font></a><br>
+</P>
+ 
+ <a href="pdf/NOTICE_Asst Lib.pdf" target="_blank" ><font color="black">Re-Schedule of the interview for the post of Assistant Librarian.For details Click here.</font></a><br>
+</P>
+ 
+  <a href="pdf/List of Shortlisted Candidate_Asst Lib.pdf" target="_blank" ><font color="black">List of Shortlisted Candidates for the post of Assistant Librarian.For details Click here.</font></a><br>
+</P>
+ 
+ <a href="pdf/Result_21.2.22.pdf" target="_blank" ><font color="black">Result of walk-in-intertview held on 21st February 2022 for appointment of Junior Proiect Fellow on contractual basis in NERIE.For details Click here.</font></a><br>
+</P>
+ 
+ <a href="pdf/Result_JPF_2022.pdf" target="_blank" ><font color="black">Result of walk-in-intertview held on 8th February 2022 for appointment of Junior Proiect Fellow on contractual basis in NERIE.For details Click here.</font></a><br>
+</P>
+ 
+ <a href="pdf/Result.pdf" target="_blank" ><font color="black">Result of walk-in-intertview held on 10th January. 2022 for appointment of Junior Proiect Fellow on contractual basis in NERIE.For details Click here.</font></a><br>
+</P>
+ 
+ <a href="pdf/List of Candidates selected for DCGC 2022.pdf" target="_blank" ><font color="black">List of Selected Candidates for DCGC 2022 .For details Click here.</font></a><br>
+</P>
+ 
+ <a href="pdf/Selected Candidate_Technical Coordinator.pdf" target="_blank" ><font color="black">Result of the online interview held on 15th December,2021 for appointment to the post of Technical Coordinator.For details Click here.</font></a><br>
+</P>
+ 
+ <a href="pdf/List of Shortlisted Candidates_Technical.pdf" target="_blank" ><font color="black">List of Shortlisted candidates for the post of Technical Coordinator.For details Click here.</font></a><br>
+</P>
+ 
+ <a href="pdf/Brochure_front_and_back__new__.pdf" target="_blank" ><font color="black">National Seminar On Integration of Indigenous Knowledge.For details Click here.</font></a><br>
+</P>
+ 
+ <a href="pdf/Selected Candidates_23.11.21.pdf" target="_blank" ><font color="black">Result of online interview held on 23'd November, 2021 for appointment of Junior Proiect
+Fellow on contractual basis in NERIE. Umiam.For details Click here.</font></a><br>
+</P>
+ 
+ <a href="pdf/Selected Candidates_25.11.21.pdf" target="_blank" ><font color="black">Result of- online interview held on 24th November. 202L for appointment of Comouter
+Assistant on contractual basis in NERIE. Umiam.For details Click here.</font></a><br>
+</P>
+ 
+ <a href="pdf/Selected Candidates.pdf" target="_blank" ><font color="black">Result of online interview held on 25th November, 2021 for appointment of Junior Proiect
+Fellow on contractual basis i4 NERIE, Umiam..For details Click here.</font></a><br>
+</P>
+ 
+  <a href="pdf/COVID_19_Protocol.pdf" target="_blank" ><font color="black">Information to the 2nd Year B.Ed Course for the session 2021-2023.For details Click here.</font></a><br>
+</P> 
+ 
+ <a href="pdf/Shortlisted Candidates_JPF_CA.pdf" target="_blank" ><font color="black">Shortlisted list for the post of JPF and Computer Assistant.For details Click here.</font></a><br>
+</P> 
+ 
+   <a href="pdf/Advertisement_Assistant_LIB.pdf" target="_blank" ><font color="black">North East Regional Institute of Education will be appointing one post of Assistant Librarian (full{ime) purely on Contractual Basis with consolidated remuneration of Rs.45000/- FM. Interview for the posts will be conducted online through video conferencing.For details click here.</font></a><br>
+</P> 
+ 
+     <a href="pdf/Special_Education.pdf" target="_blank" ><font color="black">Result of online interview held on 27th September, 2021 for appointment of Assistant Professor in Special Eduaction on contractual basis. For details click here.</font></a><br>
+</P> 
+ 
+    <a href="pdf/Assistant_Professor .pdf" target="_blank" ><font color="black">Result of the online interview held on 27th September.202l for appointment of Assistant Professors on contractual basis. For details click here.</font></a><br>
+</P> 
+ 
+   <a href="pdf/DCGC_Admission_Announcement .pdf" target="_blank" ><font color="black">NCERT announces a one-year Diploma course for training of professionals in guidance and counselling, combining distance and face-to-face modes. The course aims at enhancing the skills and competencies of teachers to promote holistic development of pupils and handle their academic, socio-emotional, and ethical problems. The course is open to teachers, teacher educators, school administrators and untrained guidance personnel from India.Last date for submission of online application form is 05th November, 2021. For details click here.</font></a><br>
+</P> 
+ 
+   <a href="pdf/Circular.pdf" target="_blank" ><font color="black">Circular with regard to elimination of identified single use plastics. For details click here.</font></a><br>
+</P>
+  
+ <a href="pdf/Shortlisted_List_Assistant Prof.pdf" target="_blank" ><font color="black">Shortlisted candidates of Assistant Professor in Psychology, Special Education,Mathematics & Physics on Contractual Basis, against each post
+for appearing in the interview through video conferencing. For details click here.</font></a><br>
+</P>
+ 
+ <a href="pdf/HINDI.pdf" target="_blank" ><font color="black">Circular for Hindi Pakhwada. Click for details.</font></a><br>
+
+<p align="justify"><a href="pdf/CCTV_Quotations.pdf" target="_blank" ><font color="black">North East Regional Institute of Education, NCERT is interested to call for Quotations 
+from reputed vendors specialized in providing CCTV cameras and installation of the devices. The quotations may be sent to nerie.ncert1@gmail.com on or before 24th September 2021. For details please the attachment.<br>
+</font><br>
+</p>
+ 
+<a href="pdf/Certification_course_in_Early_Childhood_Care_and_Education.pdf" target="_blank" ><font color="black">Applications are invited from DIET/ SCERT faculty members, persons from NGOs, Nursery Teacher Training Institutes, School Teachers, and private candidates from North East Region for 3 month Certificate Course in Early Childhood Care and Education.For details check the attachment.
+</font></a><br>
+
+</p>
+
+<font color="black">
+				Online Applications are invited for Common Entrance Examination (CEE) 2021-23 for admission to regular 2 year Bachelor of Education (B.Ed) full time course at NERIE, NCERT Umiam, Meghalaya. For details please click on </font><a href="pdf/cee_2021_english.pdf" target="blank"><font color="orange">CEE_2021-23 (English)</a></font> or 
+				<a href="pdf/cee_2021_hindi.pdf" target="blank"><font color="orange">CEE_2021-23 (Hindi)</a></font> for information.</a>
+				</p>
+
+
+<p align="justify">
+<a href="pdf/Instructions_for_Online_Payment_SBCOLLECT.pdf" target="_blank" ><font color="black">Instructions for payment of B.Ed Admission Fees/Hostel Fees/Mess Fees 2021 through SB Collect.
+</font></a><br>
+
+</p>
+
+<p align="justify"><a href="pdf/CircularIntranet.pdf" target="_blank" ><font color="black">This is for information that ICT Section, NERIE had created & configured an Intranet platform on the Institute Server and implemented various services viz., File Server access within the Intranet.
+File Server access via Internet through VPN SSL Client, Intranet Communication/Messaging, Forums, Intranet Website, Intranet Video Conferencing. For details please check circular attached.<br>
+</font><br>
+</p>
+
+
+<div align="justify"><font color="black">
+<br>For any academic / course related queries, please send an email to <font color="red"><strong>nerieacademic(at)gmail (dot) com</strong></font> for information 
+		</font> </div>
+
+		
+	
+		  
+	     
+ </div>
+</div>
+</body>
+</html>

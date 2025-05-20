@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<body>
+
+<style>
+.ab {
+ width: 100%;
+ max-height: 400px;
+ min-height: 200px:
+}
+#about {
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 5%;
+  box-sizing: border-box;
+  background-color: white;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+
+/* Image: 30% */
+.about-image {
+  flex: 0 0 30%;
+  max-width: 30%;
+  max-height: 100%;
+}
+.about-image img {
+  width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Text: 40% */
+.about-text {
+  flex: 0 0 40%;
+  max-width: 40%;
+  max-height: 100%;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+.about-text h2 {
+  color: #003366;
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 2rem;
+}
+.about-text a {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #f3d767;
+  color: #003366;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.about-text a:hover {
+  background: #e6b800;
+}
+
+/* Card: 30% */
+.about-card {
+  flex: 0 0 30%;
+  max-width: 30%;
+  max-height: 100%;
+}
+.custom-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 20px;
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.card-subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+.card-text {
+  font-size: 0.95rem;
+}
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive: Stack on small screens */
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about-image,
+  .about-text,
+  .about-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .card-img-top {
+    height: 150px;
+  }
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+</style>
+<div class="ab">
+<section id="about">
+  <!-- Institute Image -->
+  <div class="about-image">
+    <img src="image\home\nerie1.jpg" alt="NERIE Building" />
+  </div>
+
+  <!-- Text content -->
+  <div class="about-text">
+    <h2 id="about-title">About NERIE</h2>
+    <p>The North East Regional Institute of Education (NERIE) stands amidst the natural grandeur in Umiam village which is about 20 kms away from Shillong city. 
+	The North East Regional Institute of Education (NERIE) is a constituent unit of National Council of Educational Research and Training (NCERT), New Delhi.
+	NERIE was set up at Shillong in 1995 to cater to the educational needs of the North Eastern states, viz., Assam, Arunachal Pradesh, Manipur, Meghalaya,
+	Mizoram, Nagaland, Sikkim and Tripura.</p>
+    <a href="https://nerie.nic.in" target="_blank" rel="noopener">Learn More</a>
+  </div>
+
+  <!-- Principal Card -->
+  <div class="about-card">
+    <div class="card custom-card">
+      <img src="https://res.cloudinary.com/dblrp7lrl/image/upload/v1691748788/fg_gku6ab.jpg" class="card-img-top" alt="Principal">
+      <div class="card-body">
+        <h5 class="card-title">Prof. Flourette G Dkhar</h5>
+        <h6 class="card-subtitle">In-Charge Principal</h6>
+        <p class="card-text">Welcome to the Regional Institute of Education.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelector('.read-more').addEventListener('click', function() {
+  var fullText = document.querySelector('.full-text');
+  var shortText = document.querySelector('.short-text');
+  var readMoreBtn = document.querySelector('.read-more');
+
+  // Toggle visibility of full text and short text
+  if (fullText.style.display === 'none') {
+    fullText.style.display = 'block';
+    shortText.style.display = 'none';
+    readMoreBtn.textContent = 'Read Less';
+  } else {
+    fullText.style.display = 'none';
+    shortText.style.display = 'block';
+    readMoreBtn.textContent = 'Read More';
+  }
+});
+
+</script>
+</body>
+</html>

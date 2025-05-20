@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Header</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background-color: #ffffff;
+    }
+
+    .header {
+      background-color: #fff0f5;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+    }
+
+    .text-content h1, .text-content h3 {
+      margin: 0;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .text-content h1 {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    .route-map {
+      background-color: #48b185;
+      color: white;
+      text-decoration: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .search-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .search-stack input {
+      width: 150px;
+      font-size: 12px;
+      padding: 5px;
+    }
+
+    .search-stack button {
+      padding: 5px 8px;
+      font-size: 12px;
+    }
+
+    .route-map,
+    .search-stack button {
+      width: 100%;
+    }
+
+    #date_time {
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .text-content h1 {
+        font-size: 1.1rem;
+      }
+
+      .text-content h3 {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .text-content h1 {
+        font-size: 1rem;
+      }
+
+      .text-content h3 {
+        font-size: 0.8rem;
+      }
+
+      .logo {
+        width: 50px;
+      }
+
+      .search-stack input {
+        width: 100%;
+        font-size: 14px;
+      }
+
+      .search-stack button {
+        padding: 5px 12px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+
+        <!-- Branding Centered -->
+        <div class="col-12 col-md-8 d-flex flex-column flex-md-row align-items-center justify-content-center text-center mb-3 mb-md-0">
+          <img src="https://res.cloudinary.com/dblrp7lrl/image/upload/v1676531763/Black_fumtin.png" alt="NCERT Logo" class="logo me-md-3 mb-2 mb-md-0">
+          <div class="text-content">
+            <h1>उत्तर पूर्व क्षेत्रीय शिक्षा संस्थान, शिलांग</h1>
+            <h1>NORTH EAST REGIONAL INSTITUTE OF EDUCATION, SHILLONG</h1>
+            <h3>(A constituent Unit of NCERT, New Delhi)</h3>
+          </div>
+        </div>
+
+        <!-- Right Side Stack -->
+        <div class="col-12 col-md-4 d-flex flex-column align-items-md-end align-items-center gap-2">
+          
+
+          <div class="search-stack">
+            <form class="d-flex w-100" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+              <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+
+            <a href="https://pmis.nerie.nic.in/" target="_blank" class="w-100">
+              <button type="button" class="btn btn-info btn-sm w-100"><strong>Login</strong></button>
+            </a>
+            <div id="date_time" class="fw-bold text-black"></div>
+            <a href="maps.html" class="route-map w-100 text-white">RouteMap</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <script>
+    // Function to update the date and time
+    function updateDateTime() {
+      const dateElement = document.getElementById('date_time');
+      const currentDate = new Date();
+
+      const hours = currentDate.getHours().toString().padStart(2, '0');
+      const minutes = currentDate.getMinutes().toString().padStart(2, '0');
+      const seconds = currentDate.getSeconds().toString().padStart(2, '0');
+
+      const day = currentDate.getDate();
+      const month = currentDate.getMonth() + 1; // Months are 0-indexed
+      const year = currentDate.getFullYear();
+
+      // Format the date and time
+      const formattedTime = `${hours}:${minutes}:${seconds}`;
+      const formattedDate = `${day}/${month}/${year}`;
+
+      // Display date and time
+      dateElement.innerHTML = `${formattedDate} | ${formattedTime}`;
+    }
+
+    // Update the time every second
+    setInterval(updateDateTime, 1000);
+    updateDateTime(); // Call once to display immediately
+  </script>
+
+</body>
+</html>

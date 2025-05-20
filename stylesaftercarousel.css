@@ -1,0 +1,14 @@
+marquee {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.card ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.card a {
+  font-weight: bold;
+}

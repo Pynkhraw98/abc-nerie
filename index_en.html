@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+
+<title>Home | NERIE NCERT</title>
+
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<link href="styling/modal.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="scripting/modal.js"></script>
+<script type="text/javascript" src="scripting/modal1.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styling/960response.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="styling/960style.css" media="screen" />
+<link href="styling/pagesstyle.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="styling/marqstyles.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="other.css" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+
+<link href="styling/mainmenu.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="styling/menustyle.css" />
+  
+  
+
+<link rel="stylesheet" type="text/css" href="styling/favi/css/component.css" />
+<script type="text/javascript" src="scripting/jquery.dropotron-1.0.js"></script>
+<script type="text/javascript" src="scripting/jquery.slidertron-1.1.js"></script>
+<script src="scripting/js/modernizr.custom.js"></script>
+
+
+<script type="text/javascript" src="styling/slider/js/slideshow.js"></script>
+<link rel="stylesheet" type="text/css" href="styling/slider/css/slideshow.css" />
+
+<script>document.getElementById("defaultOpen").click();</script>
+
+
+<script type="text/javascript" src="scripting/date_time.js"></script>		
+
+<!--Pynkhraw
+<script>
+  window.location.href = "index_h.html";
+</script>-->
+
+<style>
+
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+</style>
+
+
+
+
+
+<style>
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	
+}
+</style>
+
+
+<style>
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #25383C;
+}
+
+.topnav a {
+
+
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding:5px 15px;
+  margin: 10px;
+  text-decoration: none;
+ font-family: 'Lucida Console';
+    font-size: 11.8px;
+	 text-transform: uppercase;
+}
+
+.active {
+  background-color: #25383C;
+  color: black;
+  
+  
+}
+
+.topnav .icon {
+  display: none;
+  
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+	
+}
+
+.dropdown .dropbtn {
+    font-size: 11.8px;   
+    border: none;
+    outline: none;
+    color: white;
+    padding: 8px 15px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 10px;
+	
+}
+
+.dropdown-content {
+
+
+    display: none;
+    position: absolute;
+    background-color: #25383C;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	
+}
+
+.dropdown-content a {
+    float: none;
+    color: WHITE;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  border-radius: 5px 0 0 0;
+    border-left: 3px solid #FFA62F;
+	border-right: 3px solid #FFA62F;
+    color: #FFA62F;
+	  background-color: #FFFFFF;
+    background: -moz-linear-gradient(#254117, #1b1b1b);
+    background: -ms-linear-gradient(#254117, #1b1b1b);
+ 
+    background: -webkit-linear-gradient(#254117, #1b1b1b);
+    background: -o-linear-gradient(#254117, #1b1b1b);
+     background: linear-gradient(#254117, #1b1b1b);
+}
+
+.dropdown-content a:hover {
+
+    background-color: #ddd;
+    color: WHITE;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 1300px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+</style>
+<style>
+a {
+	color:#0C090A;
+	text-decoration:none;
+}
+a:hover {
+	color:green;
+}
+</style>
+
+
+
+
+<script src="styling/swc.js"></script>
+<link rel="stylesheet" href="styling/swc.css">
+
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	  <script type="text/javascript" src="js/acsty.js"></script>
+	  <script type="text/javascript" src="js/jquery.anythingzoomer.js"></script>
+<div class="center3">
+<div class="search">
+          <form action="https://www.google.com/search" onSubmit="this.target='_blank'" autocomplete="off" id="search_form">
+            <label><font color="white" size="2px"> </font><input placeholder="Search" type="text" name="q" size="13" maxlength="200"></label>
+            <input type="submit" id="searchform" title="Search" value="search" />
+            <input type="hidden" value="https://pmis.nerie.nic.in/" name="sitesearch" />
+          </form>
+        </div>
+		
+<div class="toplinks" aria-label="Main menu"> 
+			<ul role="menu">
+			<li role="menuitem"><a href="screen-reader-access.html">Screen Reader Access</a></li>
+			<li role="menuitem"><a href="#" id="char1" onClick="set()" aria-label="on or off Character Spacing">Enable Character Spacing</a>
+			<a href="#" id="char2" onClick="unset()" style="display:none;">Disable Character Spacing</a></li>
+			<li role="menuitem"><a href="#main">Skip to main Content</a></li>
+			<li role="menuitem">Font Size: <a href="#" id="incfont"><img src="images/increase_16.png" alt="Increase Font size of the Page" title="Increase Text size" /></a>
+			<a href="#" id="decfont"><img src="images/decrease_16.png" alt="Decrease Text size" title="Decrease Font size of the Page"/></a>
+			<a href="#" id="rst"><img src="images/normal_16.png" alt="Reset to normal font size of the Page" title="Reset to normal text size"/></a></li>
+			<li role="menuitem">Contrast: <a href="#" id="more1"><img src="images/white_black.png" alt="White and Black Color Contrast" title="Black text on White background"/></a>
+			<a href="#" id="more2"><img src="images/black_white_16.png" alt="Black and White Color Contrast" title="White text on Black background"/></a>
+			<a href="#" id="more3"><img src="images/standard.png" alt="Default Color Scheme" title="Reset to the default Color Scheme."/></a>
+			</li>
+			</ul>
+			</div>
+			
+	</div>
+<div class="center1">
+<div id="header">
+<div id="header-text">
+		<h1><span><img src="image/home/englishlogo.png"></span></h1>
+<h4 align="right">
+		
+		<font size="1.5px" color="white"></font><a href="index.html"><button type="button" title="View Content in Hindi" class="btn btn-info " data-toggle="modal" data-target="#myModal">हिंदी </button></a>
+		<font size="1.5px" color="white"></font><a href="index_en.html"><button type="button" disabled class="btn btn-info " data-toggle="modal" data-target="#myModal">English</button></a>
+		<font size="1.5px" color="white"></font><a href="https://pmis.nerie.nic.in/" target="_blank"><button type="button" title="Login to Programme Management Information System Portal" class="btn btn-inf" data-toggle="modal" data-target="#myModal"><strong>Login</strong> </button></a>
+		</br>
+		
+	
+
+	</br> <font color="white"><span id="date_time"></span><script type="text/javascript">window.onload = date_time('date_time');</script></font></br>
+		<a href="maps.html"><font color="white" size="2px">RouteMap</a></font>&nbsp&nbsp
+		<a href="links.html"><font color="white" size="2px">QuickLinks</a></font>&nbsp&nbsp
+		<a href="sitemap.html"><font color="white" size="2px">Sitemap</a></font></br>
+	</br>         <font color="white" size="2px">Follow us on </font><a href="https://twitter.com/nerie_ncert" title="Twitter" target="_blank"><img src="image/home/t.png"></a>&nbsp
+		<a href="https://www.facebook.com/people/NERIE-Shillong/61562787790381/" title="Facebook" target="_blank"><img src="image/home/f.png"></a>&nbsp
+		<a href="https://www.youtube.com/channel/UCWPbJHuEp4nvlC8sFXnlSvA" title="YouTube Channel" target="_blank"><img src="image/home/y.png"></a></br>
+</h4>
+
+
+</div>
+</div>
+</div>
+
+<marquee onmouseover="this.stop();" onmouseout="this.start();"><img src="image/home/new.gif" /><a href="pdf/Assistant_Professor_Advertisement_25_04_25.pdf" target="_blank" ><font color="white">Advertisement for the post of Assistant Professor (Physical Education).For details click here.</font></a>&nbsp&nbsp<font color="white">||</font><img src="image/home/new.gif" /><a href="pdf/Education Technology Brochure Final.pdf" target="_blank" ><font color="white">Admission notificaiton into M A Education Technology-RIE, Nellore .For details click here.</font></a>&nbsp&nbsp<font color="white">||</font><img src="image/home/new.gif" /><a href="https://sites.google.com/neriencert.org/nehugoldenjubileequizcompetiti/home" target="_blank" ><font color="white">NEHU Golden Jubilee Quiz Competition 2024</font></a>&nbsp&nbsp<font color="white">||</font><img src="image/home/new.gif" /><a href="https://drive.google.com/file/d/1bwb-eRaOj4S9x0Zd1DL3VImsnEpgCyg6/view" target="_blank" ><font color="white">Yuva Manan - Reflection of Youth Vol II, 2024.</font></a>&nbsp&nbsp<font color="white">||</font><img src="image/home/new.gif" /><a href="pdf/advisory_2_5_2024.pdf" target="_blank" ><font color="white">Advisory - Misuse of NCERT Logo.</font></a>&nbsp&nbsp<font color="white">||</font><img src="image/home/new.gif" /><a href="construction.html" target="_blank" ><font color="white">Terms & Conditions for Quarter allotment NCERT.</font></a>&nbsp&nbsp&nbsp&nbsp<font color="white">||</font><a href="iqac.html" target="_blank" ><font color="white">Alumni Registration.</font></a><!--&nbsp&nbsp<img src="image/home/new.gif" /><font color="white">CEE 2023: </font><a href="pdf/Bilingual_notice_cee_2023.pdf" target="_blank" ><font color="white"> Admission to Various Education Programmes of RIEs.For details click here.</font></a>--></marquee>
+
+
+<div class="center" style="width: 100%;background: rgb(2,68,120);background: linear-gradient(180deg, rgba(2,68,120,1) 0%, rgba(185,163,104,1) 99%, rgba(191,166,100,1) 100%);" >
+<div class="topnav" id="myTopnav">
+    <a href="index.html" class="active"><font color="orange">HOME</font></a>
+    <div class="dropdown">
+    <button class="dropbtn">INSTITUTIONAL&#9660 
+         </button>
+    <div class="dropdown-content">
+     <a href="introduction.html">Introduction</a>
+               <a href="campus.html">Campus</a>
+                <a href="salescounter.html">Sales Counter</a>
+				<a href="nestates.html">NE States</a>
+				<a href="rti.html">RTI</a>
+				<a href="pgallery.html">Photo Gallery</a>
+				<a href="vgallery.html">Video Gallery</a>
+				<a href="construction.html">Construction</a>
+				<a href="magazine.html">Magazine</a>
+    </div>
+  </div> 
+  
+    <div class="dropdown">
+    <button class="dropbtn">ADMINISTRATION&#9660
+       </button>
+    <div class="dropdown-content">
+                   <a href="principal.html">Principal</a>
+                  <a href="former.html">Former&nbspPrincipal </a>
+				  <a href="staff.html">Staff</a>
+    </div>
+  </div> 
+  
+    <div class="dropdown">
+    <button class="dropbtn">ACADEMIC&#9660
+         </button>
+    <div class="dropdown-content">
+                 <a href="faculty.html">Faculty</a>
+                   <a href="departments.html">Departments</a>
+					<a href="research.html">RESEARCH&nbsp&&nbspABSTRACT </a>
+					<a href="seminar.html">Programmes&nbsp&&nbspActivities </a>
+					<a href="blocklevelstudy.html">BLOCK&nbspLEVEL&nbspSTUDY </a>
+					<a href="rdc.html"><font size="1px">Regional&nbspDistribution&nbspCentre</font></a>
+    </div>
+  </div> 
+  
+   <div class="dropdown">
+    <button class="dropbtn">COMMITTEES&nbsp&&nbspCELL&#9660
+        </button>
+    <div class="dropdown-content">
+          <a href="mc.html">Management&nbspCommittee </a>
+          <a href="iab.html">IAB Committee</a>
+          <a href="pac.html">PAC Committee</a>
+				  <a href="other_committee.html">Other&nbspCommittees </a> 
+					<a href="cell.html">CELL</a>
+					<a href="iqac.html">Internal Quality Assurance Cell</a>
+    </div>
+  </div> 
+  
+     <div class="dropdown">
+    <button class="dropbtn">FACILITIES&#9660
+    </button>
+    <div class="dropdown-content">
+<a href="library.html">Library</a>
+				<a href="studio.html">STUDIO</a>
+				<a href="ict.html">ICT</a>
+					<a href="smartclassroom.html">Classroom&nbsp&&nbspAuditorium </a>					
+					<a href="hostel.html">Hostel&nbsp&&nbspCanteen </a>
+						<a href="dispensary.html">Dispensary&nbsp&&nbspGuestHouse </a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn">ANNOUNCEMENTS&#9660
+      </button>
+    <div class="dropdown-content">
+					<a href="vacancy.html">Vacancies</a>
+            <a href="tenders.html">Tenders</a>
+                   <a href="news.html">NEWS & EVENTS</a>
+             <a href="notice.html">Notice</a>
+			 <a href="results.html">Result</a>
+    </div>
+  </div> 
+  
+<div class="dropdown">
+    <button class="dropbtn">COURSES&#9660
+        </button>
+    <div class="dropdown-content">
+		<a href="bed.html">B.Ed 2Yrs</a>
+                    <a href="dgc.html">DCGC</a>
+					<a href="ece.html">ECCE</a>
+				<a href="affiliation.html">Affiliation</a>
+    </div>
+  </div> 
+  
+  
+   <a href="downloads.html" class="active">DOWNLOADS</a>
+	
+ 
+  <a href="javascript:void(0);" style="font-size:11.8px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+
+
+<body  >
+<div class="center" style="width: 90%;">
+<div id="side2">
+
+	<iframe width="190" height="220" scrolling="yes" source src="directorflash.html"  ></iframe></br>
+	<object data="https://www.youtube.com/embed/qihPCWy520c" width="190" height="110"></object>
+	
+
+</div>
+	
+
+<div id="pageslide">
+	<div id="slider_container_3" style="width: 1000px;">
+		<div id="SliderName_3" class="SliderName_3" style="width: 1000px;">
+		<img src="image/slider/yuva_manan_ii.jpeg" >
+		<img src="image/slider/Hindi Pakhwada 2024_1.png" >
+		<!--<img src="image/slider/space_day_2.png" >
+		<img src="image/slider/space_day_1.jpeg" >
+		<img src="image/slider/Hindi_1.jpg" >
+		<img src="image/slider/Hindi_2.jpg" >
+		<img src="image/slider/yoga.png" >
+		
+		<img src="image/slider/Eday_2024.jpg" >
+		<img src="image/slider/Eday_2_2024.jpg" >
+		<img src="image/slider/Eday_3_2024.jpg" >
+		<img src="image/slider/Eday_4_2024.jpg" >
+		<img src="image/slider/No Tobacco Day.png" >
+		<img src="image/slider/aic.jpeg" >
+		<img src="image/slider/Swachh Diwali Subh Diwali Campaign.png" >
+		<a href="https://www.g20.org/en/"><img src="https://www.g20.org/content/dam/gtwenty/theme_logo/logo.jpg" alt=""></a>
+					<img src="image/slider/Swachhata_Pakhwada .jpg" >
+					<img src="image/slider/NCERT_Foundation.jpeg" >
+					<img src="image/slider/E_resource_T_dey.jpg" >
+					<!--<img src="image/slider/SCERT UP_11_5_2023.jpg" >
+					<img src="image/slider/Women_day_4_3_2022.jpg" >						
+					<img src="image/slider/Bharatiya Bhasha Samiti -NERIE.jpg" >	
+					<img src="image/slider/fit_india_3.0.jpg" >	
+					<img src="image/slider/1 post.jpg" >
+					<img src="image/slider/1 pre.jpg" >
+					<img src="image/slider/logo.jpg" >
+					<img src="image/slider/Inependence_day_2022.jpg" >
+					<img src="image/slider/yoga1.jpg" >
+					<img src="image/slider/yoga2.jpg" >
+					<img src="image/slider/fitindiamovement.jpg" >
+					<img src="image/slider/a.jpg" >		
+					<img src="image/slider/1.jpg" >
+					<img src="image/slider/11a1.jpg" >
+					<img src="image/slider/222.jpg" >
+					<img src="image/slider/333.jpg" >
+					<img src="image/slider/2.jpg" >
+					<img src="image/slider/19.jpg" >
+					<img src="image/slider/3.jpg" >
+					<img src="image/slider/4.jpg" >
+					<img src="image/slider/5.jpg" >
+					<img src="image/slider/6.png" >
+					<img src="image/slider/7.png" >
+					<img src="image/slider/8.png" >
+					<img src="image/slider/9.png" >
+					<img src="image/slider/10.jpg" >
+					<img src="image/slider/11.jpg" >
+					<img src="image/slider/12.jpg" >
+					<img src="image/slider/13.jpg" >
+					<img src="image/slider/14.jpg" >
+					<img src="image/slider/15.jpg" >
+					<img src="image/slider/16.jpg" >
+					<img src="image/slider/17.png" >
+					<img src="image/slider/18.jpg" >-->
+					
+		 </div>
+				
+	<script type="text/javascript">
+			demo3Effect1 = {name: 'myEffect31', top: true, move: true, duration: 400};
+			demo3Effect2 = {name: 'myEffect32', right: true, move: true, duration: 400};
+			demo3Effect3 = {name: 'myEffect33', bottom: true, move: true, duration: 400};
+			demo3Effect4 = {name: 'myEffect34', left: true, move: true, duration: 400};
+			demo3Effect5 = {name: 'myEffect35', rows: 3, cols: 9, delay: 50, duration: 100, order: 'random', fade: true};
+			demo3Effect6 = {name: 'myEffect36', rows: 2, cols: 4, delay: 100, duration: 400, order: 'random', fade: true, chess: true};
+			effectsDemo3 = [demo3Effect1,demo3Effect2,demo3Effect3,demo3Effect4,demo3Effect5,demo3Effect6,'blinds'];
+    		var demoSlider_3 = Sliderman.slider({container: 'SliderName_3', width: 1000, height: 255, effects: effectsDemo3, display: {autoplay: 5000}});
+	</script>
+	</div>
+</div>
+
+
+<div id="side2slide">
+	<iframe width="195" height="268" scrolling="yes" source src="newsflash.html" ></iframe>
+</div>
+		
+		
+<div id="page4">
+	<nav id="menu" class="nav">					
+	<ul>
+		<li>
+			<a href="campus.html">
+			<span class=""><i aria-hidden="true" ><img src="image/Tabimages/campusicon.png"></i></span>
+			<span><font size="2px">Campus</font></span></a>
+		</li>
+						
+		<li>
+			<a href="pgallery.html">
+			<span class=""><i aria-hidden="true" ><img src="image/Tabimages/pgalleryicon.png"></i></span>
+			<span><font size="2px">Photos</font></span></a>
+		</li>
+						
+		<li>
+			<a href="vgallery.html">
+			<span class=""><i aria-hidden="true" ><img src="image/Tabimages/vgalleryicon.png"></i></span>
+			<span><font size="2px">Videos</font></span></a>
+		</li>
+						
+		<li>
+			<a href="library.html">
+			<span class=""><i aria-hidden="true" ><img src="image/Tabimages/libraryicon.png"></i></span>
+			<span><font size="2px">Library</font></span></a>
+		</li>
+						
+		<li>
+			<a href="studio.html">
+			<span class=""><i aria-hidden="true" ><img src="image/Tabimages/studioicon.png"></i><span>
+			<span><font size="2px">Studio</font></span></a>
+		</li>
+						
+		<li>
+			<a href="ict.html">
+			<span class=""><i aria-hidden="true" ><img src="image/Tabimages/icticon.png"></i></span>
+			<span><font size="2px">ICT</font></span></a>
+		</li>
+												
+		<li>
+			<a href="rti.html">
+			<span class=""><i aria-hidden="true" ><img src="image/Tabimages/rti.png"></i></span>
+			<span><font size="2px">RTI</font></span></a>
+		</li>
+	</ul>
+	</nav>			
+</div>
+	
+	
+
+<div class="row">
+
+	<div class="column middle" style="max-height: 100%;">
+	
+ <a id="main"></a>
+	</br> <h2 align="middle">Welcome</h2></br>
+	<p> The North East Regional Institute of Education (NERIE) stands amidst the natural grandeur in Umiam village which is about 20 kms away from Shillong city. 
+	The North East Regional Institute of Education (NERIE) is a constituent unit of National Council of Educational Research and Training (NCERT), New Delhi.
+	NERIE was set up at Shillong in 1995 to cater to the educational needs of the North Eastern states, viz., Assam, Arunachal Pradesh, Manipur, Meghalaya,
+	Mizoram, Nagaland, Sikkim and Tripura. But it became functional from 22nd march, 1996 as formal handing over and taking over of charge from the field offices
+	took place on this day. <br>
+	The history of inception of North East Regional Institute of Education dates back to the year 1982. The ‘Task Force’ of National Council of Educational Research 
+	and Training (NCERT) headed by Madhuri Shah made a recommendation to set up a Regional Centre for NCERT in the north east. However, it is in the year 1995 that
+	the idea of creating a separate Regional Institute of Education for the north east was mooted by amalgamating the then Field Units of NCERT at Guwahati and 
+	Shillong. At that time the Council appointed a One-man Committee under the Chairmanship of Prof. C.L. Anand, former Vice Chancellor, Arunachal Pradesh 
+	University to prepare a “Blue Print” in connection with the setting up of a Regional Institute of Education (RIE) of the NCERT for the North East at Shillong.
+	NERIE continued to function as a Field Office for about 10 years and later, in the year, 2005, Principal and 24 faculty members were recruited by NCERT, New Delhi
+	and the Institute became fully functional. The Institute shifted to its present campus in Umiam in May, 2012.
+	</p></br><br><br>
+
+
+<p><strong>About North Eastern States</strong></p>
+
+<div class="tab">
+	<button class="tablinks" onclick="openCity(event, 'AP')" id="defaultOpen"><strong>Arunachal Pradesh</strong></button>
+	<button class="tablinks" onclick="openCity(event, 'Assam')"><strong>Assam</strong></button>
+	<button class="tablinks" onclick="openCity(event, 'Manipur')"><strong>Manipur</strong></button>
+	<button class="tablinks" onclick="openCity(event, 'Mizoram')"><strong>Mizoram</strong></button>
+	<button class="tablinks" onclick="openCity(event, 'Meghalaya')"><strong>Meghalaya</strong></button>
+	<button class="tablinks" onclick="openCity(event, 'Nagaland')"><strong>Nagaland</strong></button>
+	<button class="tablinks" onclick="openCity(event, 'Sikkim')"><strong>Sikkim</strong></button>
+	<button class="tablinks" onclick="openCity(event, 'Tripura')"><strong>Tripura</strong></button>
+</div>
+
+
+<div id="AP" class="tabcontent">
+  <h3>Arunachal Pradesh</h3>
+   <p>	To the extreme North East of Indian Union there is Arunachal Pradesh, the land where the sun peeps first in the morning in India. With an area  
+  of 83,743 sqkms. Arunachal borders Bhutan on the west, China on the north, Myanmar on the east and Assam on the south. Originally a Union Territiry, 
+  Arunachal came to be a full fledge state in 1987. As is shown by its geographical location, it has strategic importance.There are 26 major tribes and
+  a number of sub tribes of Mongoloid origin in Arunachal. With rivers like Kameng, Subansiri, Siang, Lohit and Tirap flowing across it, and with lush 
+  green of forest, deep river valley and beautiful plateaus Arunachal is a charming proposal for a tourist. Arunachla is highly rich in flora and fauna 
+  varieties of wildlife found here <a href="nestates_ap.html" id="defaultOpen" ><font color="red">>>read more</a></font>
+  </p></br>
+</div>
+
+<div id="Assam" class="tabcontent">
+  <h3>Assam</h3>
+   <p>	>Assam is a unique state of north eastern part of India. It is situated at the heart of the seven north eastern states Assam covers an area of about 78,438 Km. 
+  It is bonded by Bhutan and Arunachal Pradesh on the North, Mizoram and Meghalaya on the South, Nagaland and Manipur on the East and Tripura, Bangladesh 
+  and West Bengal on the West. Prior to 1972 Shillong was the capital of Assam. But in 1972 it capital was shifted from Shillong and established at Dispur
+  at the outskirts of Guwahati. Assam was known by different names in different periods. In the “Ramayana” and “Mahabharata” the great epies, Assam was 
+  mentioned as “Pragjyotish” which means the land of eastern light. From 4th & 5th century B.C. The name “Kamrupa” became more popular than Pragjyotish. 
+  <a href="nestates_assam.html"> <font color="red">>>read more</a></font>
+  </p> </br>
+</div>
+
+<div id="Manipur" class="tabcontent">
+  <h3>Manipur</h3>
+  <p>Nestling on a plateau far above the sea level, deep within a lush green corner of North East India is the wonderfully beautiful little Shangrila 
+  called Manipur. The word Manipur means “the land of Jewels”. This jewel land is an oval shaped valley which is surrounded by blue and green hills, 
+  with its cascading rapids, tripping rivers, carpet of flowers, exotic blooms and lazy lakes and all this has inspired its description at the "Switzerland
+  of the East”. Manipur became the 20th state of the Indian Union in 1972. The state spans over 22,327 sqkms and share an International boundary with Myanmar
+  in the west and lies south of Nagaland, North of Mizoram and west of Assam. The people and the tribes of Manipur include Meities, Naga and Kuki – Chin Mizo 
+    <a href="nestates_manipur.html" ><font color="red">>>read more</a></font>
+  </p></br>
+</div>
+
+<div id="Mizoram" class="tabcontent">
+  <h3>Mizoram</h3>
+ <p>Originally known as Lushai Hills, Mizoram was carved out of Assam and declared a Union Territory on 21st January, 1972. Later on 15th August, 
+  1986 it was given a statehood and came to be the 23rd state of India. Mizoram means “Land of Mizos”. Within the north east region, it is the southernmost 
+  landlocked state, sharing borders with three of the seven sister states, namely Tripura, Assam and Manipur. The state also shares a 722 Kilometre border 
+  with the neighbouring countries of Bangladesh and Myanmar. Mizoram covers an area of approximately 21,087 sq.kms. About 91% of the state is forested.
+  Mizoram too is a land lying on the cradle of nature’s beauty. Decorated with rows of hills the state is at an altitude of 900m above the sea level. 
+  Ranging from the  <a href="nestates_mizoram.html" ><font color="red">>>read more</a></font>
+</p></br>
+</div>
+
+<div id="Meghalaya" class="tabcontent">
+  <h3>Meghalaya</h3>
+  <p>The name of this beautiful state itself is poetic. “Megha” means clouds and “Alaya” means abode. Thus Meghalaya is the “abode of clouds”. 
+  The tribal state of the Khasis, the Jaintias and the Garos was originally a part of Assam, but on January 21,1972 it was declared a state
+  of the Indian Union. The rows of tall green pine trees, rolling hills, rivers and streams and roads with serpentine windings, cascading waterfalls,
+  and rich flora and orchids make Meghalaya a paradise for the tourists. To add its attraction, Meghalaya has an educated, cultured and hospitable people. 
+  Mostly Christians, they are well versed in English and Hindi, in addition to their local languages.Meghalaya covers an area of approximately 22,430 
+  square km, with a length to breath ratio of about <a href="nestates_megh.html" ><font color="red">>>read more</a></font>
+ </p> </br>
+</div>
+
+<div id="Nagaland" class="tabcontent">
+  <h3>Nagaland</h3>
+  <p>The narrow strip of mountain territory, Nagaland has Assam to its north and west, Manipur to its south and Myanmar to its east. Originally a 
+  district of Assam, Nagaland was declared 16th state of India on 15th December 1963. It is the only state in the country which has English as the 
+  official state language.With an area of about 16,579 sqrKms. Nagaland has hills ranging from 2000ft to 10,000ft in altitude. Saramati near Kohima,
+  is the highest peak in Nagaland with an altitude of 3826 meters. Several majopr rivers of Assam, such as Dhanshiri, Doyang, Bhogdai, Jhanji originates
+  in Nagaland. The state has also a rich variety of flora and fauna. They are mainly inhabited by 16 groups of Tibeto-Burma tribes. Their distinctive shawls 
+  differentiate one tribe from  <a href="nestates_nagaland.html" ><font color="red">>>read more</a></font>
+ </p></br>
+</div>
+
+<div id="Sikkim" class="tabcontent">
+  <h3>Sikkim</h3>
+  <p>Sikkim is a state in Northeast India. It borders the Tibet Autonomous Region of China in the north and northeast, Bhutan in the east, 
+	Nepal in the west and the Indian state of West Bengal in the south. Sikkim is also located close to India's Siliguri Corridornear Bangladesh. 
+	Sikkim is the least populous and second smallest among the Indian states. A part of the Eastern Himalaya, Sikkim is notable for its biodiversity, 
+	including alpine and subtropical climates, as well as being a host to Kanchenjunga, the highest peak in India and third highest on Earth. Sikkim's 
+	capital and largest city is Gangtok. The Kingdom of Sikkim was founded on the Silk Road by the Namgyal dynasty in the 17th century. It was ruled 
+	by a Buddhist priest-king known as the Chogyal. It became a princely  <a href="nestates_sikkim.html" ><font color="red">>>read more</a></font>
+ </p></br> 
+</div>
+
+<div id="Tripura" class="tabcontent">
+  <h3>Tripura</h3>
+  <p>With a geographical area of about 10,500 sqkms. Tripura is bounded on the north, west, south and southeast by the international boundary of 
+  Bangladesh. In the east it has common boundary with Assam and Mizoram. Hills & forest covers 60% of its total area. The former princely state 
+  of Tripura was ruled by Maharaja of Manikya dynasty. In 1949 it acceded to Indian Union. On January 21 1972 it attained statehood. With 19 
+  different tribal communities Bengali, Manipuri, Lushai and Chakma community residing in the state,Tripura has a composite culture. Each community
+  has its own dance forms which are famous in the country. Tripura specializes in handloom and handicrafts. Its exceptional, decorative articles 
+  made from bamboo-roots,   bamboo and 
+  <a href="nestates_tripura.html" ><font color="red">>>read more</a></font>
+ </p> </br>
+</div></br></br><br>
+
+
+
+	<table>
+		<tr> 
+			<td><p align="middle"><strong>&nbsp&nbsp&nbsp TENDERS/QUOTATION</strong></p><iframe   scrolling="no" frameborder="0" style="width:100%; height:400px; "source src="tendersmarq.html" >TENDERS</iframe></td>
+			<td><p align="middle"><strong>&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp VACANCY</strong></p><iframe  scrolling="no" frameborder="0" style="width:100%; height:400px; "source src="vacancymarq.html" ></iframe></td>
+			<td><p align="middle"><strong>&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp NOTICE</strong></p><iframe  scrolling="no" frameborder="0" style="width:100%; height:400px; "source src="noticemarq.html" ></iframe></td>
+		</tr>
+	</table>
+</div>
+<style>
+blink {
+    -webkit-animation: 2s linear infinite condemned_blink_effect; // for android
+    animation: 2s linear infinite condemned_blink_effect;
+}
+@-webkit-keyframes condemned_blink_effect { // for android
+ 0%{     color: brown;    }
+    49%{    color: blue; }
+    50%{    color: green; }
+    99%{    color:red;  }
+    100%{   color: orange;    }
+}
+
+</style>
+
+
+  
+<div class="column right" style="width: 30%;">
+<table width="100%">
+		<tr><th><font size="2px">In-Charge Principal</font></th></tr>
+</table>
+   
+	<img src="image/staff/principal1.jpg" alt="Principal"  align="left" width="100%"/>
+		<p align="justify">Dr. Flourette G Dkhar took the charge of In-charge Principal, NERIE Shillong on 1st July, 2022.
+		<a href="fgdkhar.html"><font color="red">>>read more</font></a></p>
+	
+<br>
+	<table width="100%">
+	<tr>
+	<th><font size="1px">NCERT  Constituent Units</font></th>
+	</tr>
+</table>
+
+<table width="100%">
+	<tr>
+		<td>
+			<a href="http://ncert.nic.in" target="_blank">
+			<div class="picnie"><div class="text">NIE-NCERT</div></div></a>
+			<font color="red" align="left" size="1px">NIE-NCERT</font>	
+		</td>
+
+		<td>
+			<a href="https://ciet.nic.in/" target="_blank">
+			<div class="pic2"><div class="text">CIET</div></div></a>
+			<font color="red" align="left" size="1px">CIET</font>	
+		</td>
+		</tr>
+</table>
+	
+<table width="100%">	
+		<td><a href="http://rieajmer.raj.nic.in/home/HomePage.aspx" target="_blank">
+			<div class="pic3"><div class="text">RIE-AJMER</div></div></a>
+			<font color="red" align="left" size="1px">RIE-AJMER</font>
+		</td>
+
+		<td><a href="http://riebhopal.nic.in/" target="_blank" >
+			<div class="pic5"><div class="text">RIE-BHOPAL</div></div></a>
+			<font color="red" align="left" size="1px">RIE-BHOPAL</font>
+		</td>
+</table>
+
+<table width="100%">
+	<td>
+		<a href="http://www.riebbs.ac.in/" target="_blank"><div class="pic4">
+		<div class="text">RIE-BBSR</div></div></a>
+		<font color="red" align="left" size="1px">RIE-BBSR</font>	
+	</td>
+
+
+	<td><a href="http://psscive.ac.in/" target="_blank">
+		<div class="pic6"><div class="text">PSSCIVE</div></div></a>
+		<font color="red" align="left" size="1px">PSSCIVE</font>	
+	</td>
+</tr>
+</table>
+<table width="100%">
+	<tr>
+	<td>
+		<a href="http://www.riemysore.ac.in/" target="_blank"><div class="picmys">
+		<div class="text">RIE-Mysore</div></div></a>
+		<font color="red" align="left" size="1px">RIE-Mysore</font>	
+	</td>
+
+
+</tr>
+</table>
+
+
+</br>
+	<a href="pdf/IT_Usage_Policy.pdf" target="_blank"><strong><font color="green">IT Usage Policy version 1.0</font></strong></a></td>
+	
+	
+	</br></br>
+
+
+	
+
+<table width="100%">
+	<tr>
+		<td><a href="https://gem.gov.in/" target="_blank">
+			<div class="picgem"><div class="text">GEM</div></div></a>
+		</td>
+
+		<td><a href="https://www.india.gov.in/website-national-repository-open-educational-resources-nroer" target="_blank">
+			<div class="picnroer"><div class="text">NROER</div></div></a>
+		</td>
+    <td><a href="https://swayam.gov.in/" target="_blank">
+		<div class="picsw"><div class="text">SWAYAM</div></div></a>
+	</td>
+	</tr>
+		
+
+</table></br>
+
+<!--<table width="100%">
+	<tr><td><a href="https://swayam.gov.in/" target="_blank">
+		<div class="picsw"><div class="text">SWAYAM</div></div></a>
+	</td>
+	
+	<td><a href="https://ncertbooks.ncert.gov.in/login" target="_blank">
+		<div class="pictb"><div class="text">NCERT Text Books</div></div></a>
+	</td>
+	</tr>
+</table>
+<br>-->
+<table width="100%">
+	<tr>
+    <td><a href="https://ncertbooks.ncert.gov.in/login" target="_blank">
+		<div class="pictb"><div class="text">NCERT Text Books</div></div></a>
+	</td>
+    <td><a href="https://nad.gov.in/" target="_blank">
+		<div class="nadtb"><div class="text">National Academic Depository</div></div></a>
+	</td>
+	<td><a href="https://ndl.iitkgp.ac.in/" target="_blank">
+		<div class="dig"><div class="text">Corona&nbspOutbreak: Study&nbspfrom&nbspHome</div></div></a>
+	</td>
+	
+	</tr>
+</table>
+
+<br>
+<table width="100%">
+	<tr><td><a href="https://play.google.com/store/apps/details?id=com.vcaretechnologies.firstaid.fast" target="_blank">
+		<div class="fastgps"><div class="text">First Aid for Teachers&nbsp&&nbspStudents </div></div></a>
+	</td>
+	<td><a href="https://apps.apple.com/us/app/first-aid-american-red-cross/id529160691" target="_blank">
+		<div class="fastapp"><div class="text">First Aid for Teachers&nbsp&&nbspStudents </div></div></a>
+	</td>
+	
+	</tr>
+</table>
+
+<br>
+
+
+
+<br>
+
+</p>
+
+
+
+
+
+
+
+
+</div>
+
+	</div>
+
+<div class="center2" style="width: 100%;">
+
+<div class="row">
+	<div id="pagecontact1">
+<img src="image/home/1.jpg" width="40%" height="50%" align="middle" ></br>
+<font color ="white" size="3px"><p>| Designed and Developed by NERIE, NCERT | 
+</br>
+| Hosted by NIC |&nbsp&nbsp&nbsp&nbsp
+
+ <a href="terms.html"><font color ="white" size="1px"><u><strong>| Terms of Use |</strong></u></font></a></br>
+ 
+|Visitor No:
+<!--<a href="https://www.cutercounter.com/" target="_blank"><img src="https://www.cutercounter.com/hits.php?id=hmxnacdq&nd=6&style=11" border="0" alt="website counter"></a>-->
+<a href="https://www.freecounterstat.com" title="website counter"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=d2lbe5kjmllplrepj7ug78ewb5qal3rf" border="0" title="website counter" alt="website counter"></a>
+
+|</p>
+</font>
+<font color="orange"  size="2.5px">WebPage Last Updated : 06.01.2025 05:00 P.M</font>
+</div>
+		
+<div id="pagecontact">
+	<font color="white" size="5px"><strong>Contact Us</strong></font></br></br>
+	<font color="white" size="3px">
+	<strong align="justify">North East Regional Institute of Education, NCERT </br>Umiam Ri-Bhoi District, Meghalaya-793103
+	     </br></br>
+		 
+	&#x260F Office - 0364-2570009 /24 /17 /82</br>
+	<font color="white" size="2px"> &#x2709 Email:</font>  <font color="white" size="1.6px">nerie(dot)ncert1(at)gmail(dot)com <font color="orange">or </font>nerie(dot)shillong(at)ncert(dot)nic(dot)in</font></br>
+	&#x1F4E0 Fax: 0364-2570062</font></br>
+	
+    
+	<marquee behavior="left"><font color="yellow" size="2px" scrollamount="1">In case of any feedback / suggestion / comments, please send an email to </font><font color="white" size="2px">nerie(dot)ncert1(at)gmail(dot)com <font color="orange">or</font> nerie(dot)shillong(at)ncert(dot)nic(dot)in</font></marquee
+	
+	</br>
+</div>
+</div>
+
+
+
+
+
+
+<style>
+.blinking{
+    animation:blinkingText 2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #FFA500;    }
+    49%{    color: #43BFC7; }
+    50%{    color: #C34A2C; }
+    99%{    color:#43BFC7;  }
+    100%{   color: #FFA500;    }
+}
+</style>
+
+
+<script src="styling/swc.js"></script>
+<link rel="stylesheet" href="styling/swc.css">
+
+
+
+
+
+
+
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+	<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #E5E4E2;
+}
+.tab1 {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #5E7D7E;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 5px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #BCC6CC;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: 	#F3E5AB;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 7px;
+    border: 2px solid #ccc;
+    border-top: none;
+	font-size: 17px;
+}
+
+
+</style>		
+
+
+	
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+     /* Should be removed. Only for demonstration */
+}
+
+.left, .right {
+  width: 30%;
+    height: auto;
+	 border: 0px solid silver;
+}
+
+.full {
+width: 100%;
+}
+
+.middle {
+  width: 70%;
+  height: auto;
+   border: 1px solid silver;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+
+<style>
+.blinking{
+    animation:blinkingText 2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #FFA500;    }
+    49%{    color: #43BFC7; }
+    50%{    color: #C34A2C; }
+    99%{    color:#43BFC7;  }
+    100%{   color: #FFA500;    }
+}
+</style>
+
+</div>	
+<!-- for styling popup -->
+ <!-- <style> -->
+        <!-- .popup { -->
+            <!-- background-color:cadetblue; -->
+            <!-- width: 550px; -->
+            <!-- padding: 10px 10px; -->
+            <!-- position: absolute; -->
+            <!-- transform: translate(-50%, -50%); -->
+            <!-- left: 50%; -->
+            <!-- top: 20%; -->
+            <!-- border-radius: 20px; -->
+            <!-- text-align: center; -->
+        <!-- } -->
+
+        <!-- .popup button { -->
+            <!-- display: block; -->
+            <!-- margin: 0 0 20px auto; -->
+            <!-- background-color: transparent; -->
+            <!-- font-size: 50px; -->
+            <!-- color: green; -->
+            <!-- border: none; -->
+            <!-- outline: none; -->
+            <!-- cursor: pointer; -->
+
+        <!-- } -->
+
+        <!-- .popup p { -->
+            <!-- text-align: justify; -->
+        <!-- } -->
+    <!-- </style> -->
+    <!-- for styling popup -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16476674274"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16476674274');
+</script>
+<!-- Event snippet for Purchase conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16476674274/wNAoCLS0h5cZEOKx2LA9',
+      'transaction_id': ''
+  });
+</script>
+</head>
+<!-- For popup -->
+<!-- <div class="popup"> -->
+        <!-- <button id="close">&times;</button> -->
+        <!-- <h2>Seminar 17th- 18th February 2022</h2> -->
+        <!-- <p> -->
+            <!-- National Seminar On Integration of Indigenous Knowledge in the School Curriculum: Prospects and Challenges.  -->
+			
+        <!-- </p> -->
+		<!-- <a href="pdf/NISK Schedule - final 16.02.22.pdf" target="_blank"><font color="blue">National Seminar Schedule.For details Click here</font></a><img src="image/home/new.gif" /><br> -->
+		<!-- <a href="pdf/NOTICE_NSIK.pdf" target="_blank"><font color="black">NOTICE.For details Click here</font></a><br> -->
+		<!-- <a href="pdf/CORRIGENDUM_nsik.pdf" target="_blank"><font color="black">Corrigendum.Click here</font></a><br> -->
+        <!-- <a href="pdf/brochure_nsik.pdf" target="_blank"><font color="black">To download Brochure.Click here</font></a><br> -->
+		<!-- <a href="pdf/Registration_form .pdf" target="_blank"><font color="black">To download Registration form.Click here</font></a><br> -->
+    <!-- </div> -->
+    <!-- </div> -->
+
+    <!-- <script> -->
+        <!-- document.querySelector("#close").addEventListener("click", function () { -->
+            <!-- document.querySelector(".popup").style.display = "none" -->
+        <!-- }); -->
+    <!-- </script> -->
+    <!-- For popup -->
+
+<!-- for styling popup 2024 -->
+<style>
+         .popup {
+            background-color:white;
+            width: 770px;
+            padding: 10px 10px;
+            position: absolute;
+            transform: translate(-50%, -210%);
+            left: 50%;
+            top: 46%;
+            border-radius: 20px;
+            text-align: center;
+        }
+    
+        .popup button {
+            display: block;
+            margin: 0 0 20px auto;
+            background-color: transparent;
+            font-size: 50px;
+            color: green;
+            border: none;
+            outline: none;
+            cursor: pointer;
+    
+        }
+    
+        .popup p {
+            text-align: justify;
+        }
+    </style>
+    <!-- for styling popup -->
+	<!-- for styling popup -->
+ 
+
+</head>
+
+<!-- For popup 2024 -->
+<div class="popup"> 
+  <button id="close">&times;</button>
+  <h2 align="center"><font color="green">Diploma Course in Guidance & Counselling 2025</h2></font>
+  
+  
+  <a href="pdf/DCGC_Result_of_Admission_Entrance_Test_2024.pdf" target="_blank"><font color="maroon">Result of Admission Entrance Test DCGC.For details click here.</font></a><img src="image/home/new.gif" /><br>
+  
+  <a href="notice.html" target="_blank"><font color="maroon">For details click here.</font></a><br>
+  
+  <img src="image/slider/Black.png" height="150" width="120">
+  
+  
+  
+  
+</div>
+</div>
+<script>
+  document.querySelector("#close").addEventListener("click", function () { 
+      document.querySelector(".popup").style.display = "none" 
+  }); 
+</script>
+    <!-- For popup -->
+	<!-- For popup -->
+
+
+</body>
+</html>

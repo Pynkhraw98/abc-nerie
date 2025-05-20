@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NERIE Shillong</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Base and reset */
+    body, html {
+      margin: 0; padding: 0; scroll-behavior: smooth;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #F4F7F6;
+      color: #2D3E44;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      color: #EF6F6C;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navbar */
+    nav.navbar {
+      background: #1B3B36;
+      padding: 0.5rem 1rem;
+    }
+    nav.navbar .navbar-brand {
+      color: white;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+    }
+    nav.navbar .nav-link {
+      color: #B2C7C1;
+      font-weight: 600;
+      margin-left: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav.navbar .nav-link:hover {
+      color: #EF6F6C;
+    }
+
+    /* Hero */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1564866568746-c5c48f6a5059?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(27,59,54, 0.75);
+    }
+    .hero-content {
+      position: relative;
+      max-width: 900px;
+      padding: 0 20px;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.65);
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+      font-weight: 500;
+      text-shadow: 0 1px 5px rgba(0,0,0,0.55);
+      margin-bottom: 2rem;
+    }
+    .hero-content .btn-cta {
+      background-color: #EF6F6C;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+      color: white;
+      cursor: pointer;
+      text-transform: uppercase;
+      box-shadow: 0 5px 10px rgba(239,111,108,0.75);
+    }
+    .hero-content .btn-cta:hover {
+      background-color: #d9534f;
+      box-shadow: 0 5px 15px rgba(217,83,79,0.9);
+    }
+
+    /* About Section */
+    #about {
+      padding: 60px 15px;
+      background-color: white;
+      max-width: 1200px;
+      margin: 2rem auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgb(0 0 0 / 0.15);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
+    #about img {
+      width: 400px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      box-shadow: 0 0 15px rgba(27,59,54,0.2);
+    }
+    #about div.text {
+      flex: 1 1 400px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #2D3E44;
+    }
+    #about div.text h2 {
+      color: #1B3B36;
+      font-weight: 900;
+      margin-bottom: 12px;
+      font-size: 2.2rem;
+    }
+    #about div.text p {
+      margin-bottom: 20px;
+    }
+    #about div.text a {
+      display: inline-block;
+      padding: 10px 25px;
+      background: #EF6F6C;
+      color: white;
+      border-radius: 40px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    #about div.text a:hover {
+      background: #d9534f;
+    }
+
+    /* Notices Section */
+    #notices {
+      max-width: 1200px;
+      margin: 2rem auto 4rem;
+      padding: 0 15px;
+    }
+    #notices h2 {
+      text-align: center;
+      color: #1B3B36;
+      font-weight: 900;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .notice-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+    .notice-item {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(27,59,54,0.1);
+      width: 280px;
+      padding: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+    }
+    .notice-item:hover {
+      box-shadow: 0 8px 20px rgba(239,111,108,0.3);
+    }
+    .notice-item a {
+      color: #EF6F6C;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .notice-item small {
+      color: #6D7B7B;
+      display: block;
+      margin-top: 6px;
+      font-size: 0.85rem;
+    }
+
+    /* Quick Links Section */
+    #quicklinks {
+      max-width: 1200px;
+      padding: 2rem 15px 3rem;
+      margin: 0 auto 4rem;
+      background: #1B3B36;
+      color: white;
+      border-radius: 10px;
+      text-align: center;
+    }
+    #quicklinks h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 2rem;
+    }
+    .quick-links-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+    .ql-item {
+      background: #154139;
+      border-radius: 12px;
+      width: 150px;
+      padding: 25px;
+      box-shadow: 0 3px 12px rgb(0 0 0 / 0.25);
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ql-item:hover {
+      background-color: #EF6F6C;
+      color: white;
+      box-shadow: 0 6px 16px rgba(239,111,108,0.7);
+    }
+    .ql-item svg {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 12px;
+      fill: currentColor;
+    }
+
+    /* Footer */
+    footer.footer {
+      background-color: #143633;
+      color: white;
+      padding: 30px 15px;
+      text-align: center;
+      font-size: 0.9rem;
+      user-select: none;
+      margin-top: auto;
+    }
+    footer.footer a {
+      color: #EF6F6C;
+    }
+
+    /* Back to top */
+    #backToTop {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background-color: #EF6F6C;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 50%;
+      cursor: pointer;
+      color: white;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 8px rgba(239,111,108,0.7);
+      display: none;
+      z-index: 9999;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    #backToTop:hover {
+      background-color: #d9534f;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      #about {
+        flex-direction: column;
+        text-align: center;
+      }
+      #about img {
+        max-width: 90vw;
+      }
+      .quick-links-grid {
+        gap: 20px;
+      }
+    }
+    @media (max-width: 576px) {
+      .notice-item {
+        width: 100%;
+      }
+      .ql-item {
+        width: 45vw;
+        font-size: 0.95rem;
+        padding: 18px 10px;
+      }
+    }
+
+    /* Tabs and principal styling */
+    .content-box {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 1rem auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(27,59,54,0.2);
+    }
+    .tab-buttons {
+      max-width: 1200px;
+      margin: 1rem auto 2rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0 15px;
+    }
+    .tab-buttons .btn {
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .tab-buttons .btn.active-tab {
+      background-color: #EF6F6C;
+      color: #1B3B36;
+    }
+    .content-box img {
+      max-width: 300px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(27,59,54,0.3);
+    }
+    .content-box div {
+      flex: 1;
+      color: #2D3E44;
+    }
+    .read-more {
+      color: #EF6F6C;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      margin-top: 0.5rem;
+      display: inline-block;
+    }
+    .read-more:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <!-- carousel img adjust -->
+  <style>
+    .carousel-img {
+      height: 600px; /* Adjust this value to change image height */
+      max-width: 90%;
+      object-fit: cover; /* Keeps aspect ratio, crops if needed */
+      justify-content: grid;
+      align-items: center;
+    }
+  </style>
+<!-- carousel img adjust -->
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg" aria-label="Main Navigation">
+  <a class="navbar-brand" href="#">NERIE Shillong</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#notices">Notices</a></li>
+      <li class="nav-item"><a class="nav-link" href="#quicklinks">Quick Links</a></li>
+      <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- carousel -->
+
+   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="pictures/pic2.jpeg" class="d-block w-100 carousel-img" alt="...">
+        
+      </div>
+      <div class="carousel-item">
+        <img src="pictures/pic3.jpg" class="d-block w-100 carousel-img" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="pictures/pic1.jpg" class="d-block w-100 carousel-img" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  <!-- carousel -->
+
+<!-- Hero Section 
+<section class="hero" role="banner" aria-label="Hero area">
+  <div class="hero-content">
+    <h1>North East Regional Institute of Education,<br />Shillong (NERIE)</h1>
+    <p>A Constituent Unit of National Council of Educational Research and Training, New Delhi</p>
+    <button class="btn-cta" onclick="document.getElementById('notices').scrollIntoView({behavior:'smooth'})" aria-label="View important notices">View Notices</button>
+  </div>
+</section>-->
+
+<!-- About Section -->
+<section id="about" tabindex="0" aria-labelledby="about-title">
+  <img src="image\home\1.jpg" alt="NERIE Building" />
+  <div class="text">
+    <h2 id="about-title">About NERIE Shillong</h2>
+    <p>Established in 1995, NERIE Shillong caters to the educational needs of the North Eastern states of India - Assam, Arunachal Pradesh, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, and Tripura. We are dedicated to teacher education, research, and development, advancing the quality of education in the region.</p>
+    <a href="https://ncert.nic.in" target="_blank" rel="noopener" aria-label="Learn more about NCERT">Learn More</a>
+  </div>
+</section>
+
+<!-- Notices Section -->
+<section id="notices" tabindex="0" aria-labelledby="notices-title" class="container">
+  <h2 id="notices-title">Important Notices & Events</h2>
+  <div class="notice-list" role="list">
+    <div class="notice-item" role="listitem"><a href="#" aria-label="Open for 2025 Admission">Open for 2025 Admission</a><small>Updated April 2024</small></div>
+    <div class="notice-item" role="listitem"><a href="#" aria-label="Workshop on Inclusive Education">Workshop on Inclusive Education</a><small>May 15-17, 2024</small></div>
+    <div class="notice-item" role="listitem"><a href="#" aria-label="Assistant Professor Vacancies">Assistant Professor Vacancies</a><small>Apply by May 15</small></div>
+  </div>
+</section>
+
+<!-- Quick Links Section -->
+<section id="quicklinks" aria-label="Quick links to programmes and resources">
+  <h2>Quick Links</h2>
+  <div class="quick-links-grid">
+    <a class="ql-item" href="#" aria-label="Courses">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.984 5.833M12 14v7a12.087 12.087 0 005.995-2.825"/></svg>
+      Courses
+    </a>
+    <a class="ql-item" href="#" aria-label="Library">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16h8M8 12h8M8 8h8M16 4v16M8 4v16"/></svg>
+      Library
+    </a>
+    <a class="ql-item" href="#" aria-label="Facilities">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h14M5 20h14M5 12h14"/></svg>
+      Facilities
+    </a>
+    <a class="ql-item" href="#" aria-label="E-Courses">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A.5.5 0 0120 8.174v7.652a.5.5 0 01-.447.486L15 14M4 6h8v12H4z"/></svg>
+      E-Courses
+    </a>
+    <a class="ql-item" href="#" aria-label="Institute Repository">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m2 0a2 2 0 110 4H7a2 2 0 110-4h10z"/></svg>
+      Repository
+    </a>
+  </div>
+</section>
+
+<!-- Principal Card and Other Units Tabs Section -->
+<div class="container mt-5">
+  <div class="row">
+    <!-- Principal Card -->
+    <div class="col-md-4">
+      <div class="card p-3 bg-danger text-white">
+        <img src="https://res.cloudinary.com/dblrp7lrl/image/upload/v1691748788/fg_gku6ab.jpg" class="img-fluid mb-2 rounded" alt="Prof. Flourette G Dkhar, In-Charge Principal">
+        <h6>Prof. Flourette G Dkhar</h6>
+        <strong>In-Charge Principal</strong>
+        <p>Welcome to the Regional Institute of Education</p>
+        <a href="#" class="text-white fw-bold">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="text-center mb-4 mt-5">OTHER UNITS OF NCERT</h4>
+  <div class="d-flex justify-content-center flex-wrap gap-2 tab-buttons mb-3">
+    <button type="button" class="btn active-tab btn-outline-danger" onclick="showTab('nie', this)">NIE - NCERT</button>
+    <button type="button" class="btn btn-light" onclick="showTab('mysore', this)">RIE - Mysore</button>
+    <button type="button" class="btn btn-light" onclick="showTab('bhu', this)">RIE - BHUBANESWAR</button>
+    <button type="button" class="btn btn-light" onclick="showTab('bho', this)">RIE - BHO</button>
+    <button type="button" class="btn btn-light" onclick="showTab('ajmer', this)">RIE - AJMER</button>
+    <button type="button" class="btn btn-light" onclick="showTab('nellore', this)">RIE - NELLORE</button>
+    <button type="button" class="btn btn-light" onclick="showTab('psscive', this)">PSSCIVE</button>
+    <button type="button" class="btn btn-light" onclick="showTab('ciet', this)">CIET</button>
+    <button type="button" class="btn btn-light" onclick="showTab('iucte', this)">IUCTE</button>
+  </div>
+
+  <div id="nie" class="tab-content active content-box mb-4" style="display:flex;">
+    <img src="image\home\ncert.jpg" alt="NCERT Building" class="img-fluid rounded" style="max-width:300px; flex-shrink: 0; max-height: 300px;">
+    <div>
+      <p style="text-align: justify;">The National Council of Educational Research and Training (NCERT) is an autonomous organisation set up in 1961 by the Government of India to assist and advise the Central and State Governments on policies and programmes for qualitative improvement in school education. The major objectives of NCERT and its constituent units are to: undertake, promote and coordinate research in areas related to school education; prepare and publish model textbooks, supplementary material, newsletters, journals and develop educational kits, multimedia digital materials, etc. organise pre-service and in-service training of teachers; develop and disseminate innovative educational techniques and practices; collaborate and network with state educational departments, universities, NGOs and other educational institutions.</p>
+      <a href="https://ncert.nic.in/?ln=en" target="_blank" class="read-more fw-semibold text-danger">Read more <span>&#9656;</span></a>
+    </div>
+  </div>
+
+  <div id="mysore" class="tab-content content-box mb-4" style="display:none;">
+    <img src="image\home\mysore.jpg" alt="RIE Mysore" class="img-fluid rounded" style="max-width:300px; flex-shrink: 0;">
+    <div>
+      <p style="text-align: justify;">The North East Regional Institute of Education (NERIE) is a constituent unit of National Council of Educational Research and Training (NCERT), New Delhi. NERIE was set up at Shillong in 1995 to cater to the educational needs of the North Eastern states, viz., Assam, Arunachal Pradesh, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim and Tripura. The other constituent units of NCERT are National Institute of Education (New Delhi); Central Institute of Educational Technology (CIET), New Delhi; Pandit Sunderlal Sharma Central Institute of Vocational Education (PSSCIVE), Bhopal.</p>
+      <a href="https://riemysore.ac.in/" target="_blank" class="read-more fw-semibold text-danger">Read more <span>&#9656;</span></a>
+    </div>
+  </div>
+
+  <div id="bhu" class="tab-content content-box mb-4" style="display:none;">
+    <img src="image\home\bhubaneshwar.jpg" alt="RIE BHUBANESWAR" class="img-fluid rounded" style="max-width:300px; flex-shrink: 0;">
+    <div>
+      <p style="text-align: justify;">The Regional Institute of Education, Bhubaneswar is a constituent unit of National Council of Educational Research and Training (NCERT), New Delhi. The NCERT was set up by Government of India in 1961 as an autonomous organization registered under Societies Registration Act (Act XXI of 1860) to advise and assist the Ministry of Human Resource Development (MHRD), Govt. of India and Departments of Education in States and Union Territories in formulation and implementation of their policies and programmes in the field of Education.</p>
+      <a href="https://www.riebbs.ac.in/" target="_blank" class="read-more fw-semibold text-danger">Read more <span>&#9656;</span></a>
+    </div>
+  </div>
+
+  <div id="bho" class="tab-content content-box mb-4" style="display:none;">
+    <img src="image\home\bhopal.jpg" alt="RIE BHOPAL" class="img-fluid rounded" style="max-width:300px; flex-shrink: 0;">
+    <div>
+      <p style="text-align: justify;">Regional Institute of Education (RIE), Bhopal is a constituent unit of NCERT, New Delhi. The Institute looks after teacher education and other educational requirements of the States of Chhattisgarh, Goa, Gujarat, Madhya Pradesh, Maharashtra and UTs of Dadra and Nagar Haveli and Daman and Diu. The Institute is located at Shyamla Hills and is 7 Kms away from both Bhopal and Habibganj railway stations and about 20 Kms from Raja Bhoj Airport, Bhopal.</p>
+      <a href="https://riebhopal.ncert.gov.in/" target="_blank" class="read-more fw-semibold text-danger">Read more <span>&#9656;</span></a>
+    </div>
+  </div>
+
+  <div id="ajmer" class="tab-content content-box mb-4" style="display:none;">
+    <img src="image\home\ajmer.jpg" alt="RIE AJMER" class="img-fluid rounded" style="max-width:300px; flex-shrink: 0;">
+    <div>
+      <p style="text-align: justify;">Regional Institute of Education, Ajmer was set up in the year 1963. It looks after the educational interests of Northern Region comprising the states of Haryana, Himachal Pradesh, Jammu & Kashmir, Punjab, Rajasthan, Uttaranchal, Uttar Pradesh, the National Capital Territory of Delhi and the Union Territory of Chandigarh. Ajmer is well-known all over India as a historical and religious place of pilgrimage as well as an educational centre. It owes this reputation partly to the Regional Institute of Education (RIE).</p>
+      <a href="#" class="read-more fw-semibold text-danger">Read more <span>&#9656;</span></a>
+    </div>
+  </div>
+
+  <div id="nellore" class="tab-content content-box mb-4" style="display:none;">
+    <img src="image\home\psscive.jpg" alt="RIE NELLORE" class="img-fluid rounded" style="max-width:300px; flex-shrink: 0;">
+    <div>
+      <p style="text-align: justify;">Regional Institute of Education, Ajmer was set up in the year 1963. It looks after the educational interests of Northern Region comprising the states of Haryana, Himachal Pradesh, Jammu & Kashmir, Punjab, Rajasthan, Uttaranchal, Uttar Pradesh, the National Capital Territory of Delhi and the Union Territory of Chandigarh. Ajmer is well-known all over India as a historical and religious place of pilgrimage as well as an educational centre. It owes this reputation partly to the Regional Institute of Education (RIE).</p>
+      <a href="#" class="read-more fw-semibold text-danger">Read more <span>&#9656;</span></a>
+    </div>
+  </div>
+
+  <div id="psscive" class="tab-content content-box mb-4" style="display:none;">
+    <img src="image\home\psscive.jpg" alt="PSSCIVE" class="img-fluid rounded" style="max-width:300px; flex-shrink: 0;">
+    <div>
+      <p style="text-align: justify;">The Pandit Sundarlal Sharma Central Institute of Vocational Education (PSSCIVE) is an apex research and development organization in the field of vocational education. It is a constituent unit of National Council of Education Research and Training(NCERT), established by the Ministry of Human Resource Development (MHRD), Government of India in 1993 at Bhopal. It is a UNEVOC (International Project on Technical and Vocational Education) Center in India.</p>
+      <a href="https://www.psscive.ac.in/" target="_blank" class="read-more fw-semibold text-danger">Read more <span>&#9656;</span></a>
+    </div>
+  </div>
+
+  <div id="ciet" class="tab-content content-box mb-4" style="display:none;">
+    <img src="image\home\ciet.jpg" alt="CIET" class="img-fluid rounded" style="max-width:300px; flex-shrink: 0;">
+    <div>
+      <p style="text-align: justify;">Central Institute Of Educational Technology(CIET), a constituent unit of NCERT, came into existence in the year 1984 with the merger of Center for Educational Technology and Department of Teaching Aids. CIET is a premiere national institute of educational technology. Its major aim is to promote utilization of educational technologies viz. radio, TV, films, Satellite communications and cyber media either separately or in combinations. The institute undertakes activities to widen educational opportunities, promote equity and improve quality of educational processes at school level.</p>
+      <a href="https://ciet.ncert.gov.in/" target="_blank" class="read-more fw-semibold text-danger">Read more <span>&#9656;</span></a>
+    </div>
+  </div>
+
+  <div id="iucte" class="tab-content content-box mb-4" style="display:none;">
+    <img src="image\home\nation.jpg" alt="IUCTE" class="img-fluid rounded" style="max-width:300px; flex-shrink: 0;">
+    <div>
+      <p style="text-align: justify;">The Department of Higher Education, Ministry of Human Resource Development, Govt. of India, New Delhi has recently set up an Inter University Centre for Teacher Education (IUCTE) at the Regional Institute of Education, Mysore, which is one of the constituent units of the NCERT, New Delhi which in turn is an autonomous body under the Ministry of HRD, Govt. of India, New Delhi. The IUCTE aims to strengthen the knowledge base of Teacher Education by facilitating professional development, networking, new knowledge creation and empowerment of teachers of Academic Institutions and Central & State Universities in Southern Region.</p>
+      <a href="https://www.iucte.ac.in/" target="_blank" class="read-more fw-semibold text-danger">Read more <span>&#9656;</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer" role="contentinfo" id="footer">
+  <p><strong>North East Regional Institute of Education, Shillong (NCERT)</strong></p>
+  <p>Umiam Shillong - 7931013, Ri-Bhoi, Meghalaya, India</p>
+  <p>📞 0364-2570009 /24 /17 /82 | ✉️ nerie.shillong@ncert.nic.in</p>
+  <div>
+    <a href="https://www.facebook.com/nerie.shillong" target="_blank" rel="noopener" aria-label="Facebook" style="margin-right:15px;">
+      <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" alt="Facebook" />
+    </a>
+    <a href="https://x.com/nerie_ncert" target="_blank" rel="noopener" aria-label="Twitter" style="margin-right:15px;">
+      <img src="https://img.icons8.com/ios-filled/30/ffffff/twitter.png" alt="Twitter" />
+    </a>
+    <a href="https://www.youtube.com/@nerie-ncert_studio" target="_blank" rel="noopener" aria-label="YouTube" style="margin-right:15px;">
+      <img src="https://img.icons8.com/ios-filled/30/ffffff/youtube-play.png" alt="YouTube" />
+    </a>
+    <a href="https://www.instagram.com/nerieshlg/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+      <img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram" />
+    </a>
+  </div>
+  <small>© 2024 NERIE Shillong. All rights reserved.</small>
+</footer>
+
+<button id="backToTop" aria-label="Back to top" title="Back to top">&#8679;</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Back to top button
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 300) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+  btn.addEventListener('click', () => {
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+
+  // Tabs functionality
+  function showTab(id, btn) {
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+    // Remove active from all buttons
+    document.querySelectorAll('.tab-buttons .btn').forEach(el => {
+      el.classList.remove('active-tab');
+      el.classList.add('btn-light');
+      el.classList.remove('btn-outline-danger');
+    });
+    // Show selected content
+    document.getElementById(id).style.display = 'flex';
+    // Activate button
+    btn.classList.add('active-tab');
+    btn.classList.remove('btn-light');
+    btn.classList.add('btn-outline-danger');
+  }
+</script>
+
+</body>
+</html>
+
