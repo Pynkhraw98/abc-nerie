@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NCERT - National Council of Educational Research and Training</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- For dropdown-->
+  <script>
+  document.querySelectorAll('.navbar .dropdown').forEach(function (dropdown) {
+    dropdown.addEventListener('mouseenter', function () {
+      const toggle = this.querySelector('[data-bs-toggle="dropdown"]');
+      if (toggle) bootstrap.Dropdown.getOrCreateInstance(toggle).show();
+    });
+
+    dropdown.addEventListener('mouseleave', function () {
+      const toggle = this.querySelector('[data-bs-toggle="dropdown"]');
+      if (toggle) bootstrap.Dropdown.getOrCreateInstance(toggle).hide();
+    });
+  });
+</script>
+<script type="text/javascript">
+  function date_time(id) {
+    const now = new Date();
+    const formatted = now.toLocaleString();
+    document.getElementById(id).innerHTML = formatted;
+    setTimeout(() => date_time(id), 1000);
+  }
+  window.onload = () => date_time('date_time');
+</script>
+
+<!-- Style top -->
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+  
+    .top-bar {
+  background-color: #3eabd6;
+  color: white;
+  font-size: 14px;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping if absolutely needed */
+}
+
+.top-bar > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 4px;
+  font-size: inherit;
+}
+
+.top-bar a:hover {
+  text-decoration: underline;
+}
+
+.themes {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.themes span {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.theme-orange { background-color: orange; }
+.theme-green  { background-color: green; }
+.theme-blue   { background-color: #003366; }
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.social-icons img {
+  width: 16px;
+  height: 16px;
+}
+.route-map {
+      background-color: #36bbe4;
+      color: white !important;
+      text-decoration: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+/* Tablet: reduce font and spacing */
+@media (max-width: 768px) {
+  .top-bar {
+    font-size: 12px;
+  }
+
+  .top-bar a {
+    margin: 0 3px;
+  }
+}
+
+/* Mobile: further reduce and optionally hide some links */
+@media (max-width: 480px) {
+  .top-bar {
+    font-size: 10px;
+  }
+
+  .top-bar a {
+    margin: 0 2px;
+  }
+
+  .top-bar .screen-reader,
+  .top-bar .themes
+   {
+    display: none !important;
+  }
+}
+
+</style>
+  
+  
+  <!-- Style top -->
+  
+  <!-- header -->
+     <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background-color: #ffffff;
+    }
+
+    .header {
+      background-color: #e7f7fa;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+    }
+
+    .text-content h1, .text-content h3 {
+      margin: 0;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .text-content h1 {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    .search-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .search-stack input {
+      width: 150px;
+      font-size: 12px;
+      padding: 5px;
+    }
+
+    .search-stack button {
+      padding: 5px 8px;
+      font-size: 12px;
+    }
+
+    .search-stack button {
+      width: 100%;
+    }
+
+    #date_time {
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+
+    @media (max-width: 768px) {
+      .text-content h1 {
+        font-size: 1.1rem;
+      }
+
+      .text-content h3 {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .text-content h1 {
+        font-size: 1rem;
+      }
+
+      .text-content h3 {
+        font-size: 0.8rem;
+      }
+
+      .logo {
+        width: 50px;
+      }
+
+      .search-stack input {
+        width: 100%;
+        font-size: 14px;
+      }
+
+      .search-stack button {
+        padding: 5px 12px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .text-content h1 {
+        font-size: 0.9rem;
+      }
+
+      .text-content h3 {
+        font-size: 0.7rem;
+      }
+
+      .logo {
+        width: 50px;
+      }
+
+      .search-stack input {
+        width: 100%;
+        font-size: 12px;
+      }
+
+      .search-stack button {
+        padding: 5px 12px;
+        font-size: 12px;
+      }
+    }
+  </style>
+
+<!-- Navbar -->
+<style>
+  /* Navbar Container */
+.navbar {
+  background: linear-gradient(90deg, #3eabd6, #b4ebf8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 1rem;
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+  color: black !important;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect - Box instead of underline */
+.navbar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove underline and apply glow on hover */
+.navbar .nav-link,
+.navbar .dropdown-item,
+.navbar a {
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+
+/* Glow effect on hover */
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #4e2525 !important;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+
+/* Active link style */
+.navbar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* Dropdown Menu Style */
+.dropdown-menu {
+  background-color: #b4ebf8;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu .dropdown-item {
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #3eabd6;
+  color: #000;
+}
+
+/* Show dropdown on hover for large screens */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Toggler (hamburger) icon style for mobile */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+@media (max-width: 480px) {
+  .dropdown-menu .dropdown-item {
+    font-size: 0.7rem;
+  }
+}
+
+</style>
+
+<!--sales-->
+<style>
+    .sales-section p {
+      text-align: justify;
+    }
+    .contact-info {
+      white-space: pre-line;
+    }
+  </style>
+
+
+<style>
+   /* Footer */
+    footer.footer {
+      background-color: #3eabd6;
+      color: white;
+      padding: 30px 15px;
+      text-align: center;
+      font-size: 0.9rem;
+      user-select: none;
+      margin-top: auto;
+    }
+    footer.footer a {
+      color: #ffcc00;
+    }
+
+    @media (max-width: 480px) {
+      footer.footer {
+        font-size: 0.7rem;
+      }
+    }
+
+    /* Back to top */
+    #backToTop {
+      width: 20px;
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background-color: #f5a3a3;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 50%;
+      cursor: pointer;
+      color: #003366;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 8px rgba(83, 2, 2, 0.7);
+      display: none;
+      z-index: 9999;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    #backToTop:hover {
+      background-color: #fc5454;
+    }
+</style>
+
+</head>
+<body>
+
+<!-- top -->
+  <div class="top-bar">
+   
+    <div>
+      <a href="index.html" class="route-map">हिंदी</a>
+      <a href="index_eng.html" class="route-map">English</a>
+      <a href="maps.html" class="route-map">RouteMap</a>
+      <a class="route-map" href="#footer">Contact</a>
+      <a href="#notices">Skip to main content</a>
+      <!--<a href="#">High Contrast</a> |-->
+      <!--<span>Select theme:</span>-->
+      <span class="themes">
+        <span class="theme-orange" title="Orange Theme"></span>
+        <span class="theme-green" title="Green Theme"></span>
+        <span class="theme-blue" title="Blue Theme"></span>
+      </span> |
+      <a href="#">A+</a> |
+      <a href="#" class="font-normal">A</a> |
+      <a href="#" class="font-small">A-</a> |
+      <a href="#" class="screen-reader">Screen Reader Access</a>
+    </div>
+    <div class="social-icons">
+      Connect With Us:
+      <a href="https://www.facebook.com/nerie.shillong" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="FB"></a>
+      <a href="https://x.com/nerie_ncert" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+      <a href="https://www.youtube.com/@nerie-ncert_studio" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube"></a>
+      <a href="https://www.instagram.com/nerieshlg/?hl=en" target="_blank"><img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram"></a>
+    </div>
+  </div>
+
+<!-- top -->
+
+<!--Header-->  
+
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+
+        <!-- Branding Centered -->
+        <div class="col-12 col-md-8 d-flex flex-column flex-md-row align-items-center justify-content-center text-center mb-3 mb-md-0">
+          <img src="https://res.cloudinary.com/dblrp7lrl/image/upload/v1676531763/Black_fumtin.png" alt="NCERT Logo" class="logo me-md-3 mb-2 mb-md-0">
+          <div class="text-content">
+            <h1>उत्तर पूर्व क्षेत्रीय शिक्षा संस्थान, शिलांग</h1>
+            <h1>NORTH EAST REGIONAL INSTITUTE OF EDUCATION, SHILLONG</h1>
+            <h3>(A constituent Unit of NCERT, New Delhi)</h3>
+          </div>
+        </div>
+
+        <!-- Right Side Stack -->
+        <div class="col-12 col-md-4 d-flex flex-column align-items-md-end align-items-center gap-2">
+          
+
+          <div class="search-stack">
+            <form class="d-flex w-100" role="search" action="https://www.google.com/search" method="GET" target="_blank">
+              <input class="form-control me-2" name="q" type="search" placeholder="Search..." aria-label="Search" >
+              <button class="btn btn-primary w-25" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+
+            <a href="https://pmis.nerie.nic.in/" target="_blank" class="w-100">
+              <button type="button" class="btn btn-info btn-sm w-100"><strong>Login</strong></button>
+            </a>
+            <div id="date_time" class="fw-bold text-black"></div>
+            <!--<a href="maps.html" class="route-map w-100">RouteMap</a>-->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+<!--navbar-->
+  <nav class="navbar navbar-expand-lg" aria-label="Main Navigation">
+  <div class="container-fluid">
+    <!--<a class="navbar-brand" href="#">NERIE</a>-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index_eng.html">Home</a></li>
+        <!--<li class="nav-item"><a class="nav-link" href="#notices">Notices</a></li>
+        <li class="nav-item"><a class="nav-link" href="#quicklinks">Quick Links</a></li>-->
+
+        <!-- Dropdown menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Institutional
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="introduction.html">Introduction</a></li>
+            <li><a class="dropdown-item" href="campus.html">Campus</a></li>
+            <li><a class="dropdown-item" href="salescounter.html">Sales Counter</a></li>
+            <li><a class="dropdown-item" href="nestates.html">NE States</a></li>
+            <li><a class="dropdown-item" href="rti.html">RTI</a></li>
+            <li><a class="dropdown-item" href="pgallery.html">Photo Gallery</a></li>
+            <li><a class="dropdown-item" href="vgallery.html">Video Gallery</a></li>
+            <li><a class="dropdown-item" href="construction.html">Construction</a></li>
+            <li><a class="dropdown-item" href="magazine.html">Magazine</a></li>
+            
+            <!--<li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#faq">FAQ</a></li>-->
+          </ul>
+        </li>
+        <!-- Dropdown menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Administration
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="principal.html">Principal</a></li>
+            <li><a class="dropdown-item" href="former.html">Former Principal</a></li>
+            <li><a class="dropdown-item" href="staff.html">Staff</a></li>
+          </ul>
+        </li>
+        <!-- Dropdown menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Academic
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="faculty.html">Faculty</a></li>
+            <li><a class="dropdown-item" href="department.html">Departments</a></li>
+            <li><a class="dropdown-item" href="research.html">Research & Abstract</a></li>
+            <li><a class="dropdown-item" href="seminar.html">Programmes & Activities</a></li>
+            <li><a class="dropdown-item" href="blocklevelstudy.html">Block Level Study</a></li>
+            <li><a class="dropdown-item" href="rdc.html">Regional Distribution Center</a></li>
+          </ul>
+        </li>
+        <!-- Dropdown menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Committee & Cell
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="mc.html">Management Committee</a></li>
+            <li><a class="dropdown-item" href="iab.html">IAB Committee</a></li>
+            <li><a class="dropdown-item" href="pac.html">PAC Committee</a></li>
+            <li><a class="dropdown-item" href="other_committee.html">Other Committee</a></li>
+            <li><a class="dropdown-item" href="cell.html">Cell</a></li>
+            <li><a class="dropdown-item" href="iqac.html">Internal Quality Assurance Cell</a></li>
+          </ul>
+        </li>
+        <!-- Dropdown menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Facilities
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="library.html">Library</a></li>
+            <li><a class="dropdown-item" href="studio.html">Studio</a></li>
+            <li><a class="dropdown-item" href="ict.html">ICT</a></li>
+            <li><a class="dropdown-item" href="smartclassroom.html">Classroom & Auditorium</a></li>
+            <li><a class="dropdown-item" href="hostel.html">Hostel & Canteen</a></li>
+            <li><a class="dropdown-item" href="dispensary.html">Dispensary & GuestHouse</a></li>
+          </ul>
+        </li>
+        <!-- Dropdown menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Announcements
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="vacancy.html">Vacancies</a></li>
+            <li><a class="dropdown-item" href="tenders.html">Tenders</a></li>
+            <li><a class="dropdown-item" href="news.html">News & Events</a></li>
+            <li><a class="dropdown-item" href="notice.html">Notice</a></li>
+            <li><a class="dropdown-item" href="results.html">Result</a></li>
+          </ul>
+        </li>
+        <!-- Dropdown menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Courses
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="bed.html">B.Ed 2Years</a></li>
+            <li><a class="dropdown-item" href="dgc.html">DCGC</a></li>
+            <li><a class="dropdown-item" href="ece.html">ECCE</a></li>
+            <li><a class="dropdown-item" href="affiliation.html">Affiliation</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item"><a class="nav-link" href="downloads.html">Downloads</a></li>
+        <!--<li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>-->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--sales counter-->
+<div class="container-lg py-5">
+  <div class="bg-white p-4 p-md-5 shadow-sm rounded sales-section">
+    <h6 class="text-secondary">Institutional / Sales Counter</h6>
+    <h2 class="text-primary mb-4">Sales Counter</h2>
+
+    <div class="row g-4">
+      <div class="col-md-9">
+        <p>
+          The Sales Counter of North East Regional Institute of Education is located at NERIE Campus, Umiam, Ri-Bhoi District, Meghalaya-793103. Its main purpose is to sell NCERT Publications to individuals and institutions. The Sales Counter is run by the Institute under the overall supervision of the Principal.
+        </p>
+
+        <p>
+          It offers NCERT books from Class I to XII, and other general publications. A list of available books is displayed on the official website:
+          <a href="http://www.nerie.nic.in/library.html" target="_blank">nerie.nic.in/library.html</a>. 
+          Payment is accepted in cash only, and a receipt is issued for every purchase.
+        </p>
+
+        <p>
+          The Sales Counter is open from <strong>Monday to Friday (9:00 AM – 4:00 PM)</strong>, excluding holidays as per Central Government notifications.
+        </p>
+
+        <p class="mb-4">
+          <strong>For any information and queries, please contact:</strong><br>
+          <span class="contact-info">
+         North East Regional Institute of Education (NERIE), NCERT
+         Umiam, Barapani, Shillong-793103, Meghalaya.
+         Contact Nos: 0364-2570024, 2570009
+          </span> 
+        </p>
+      </div>
+      <div class="col-md-3 text-center">
+        <img src="image/home/sal.png" alt="Sales Counter" class="img-fluid rounded shadow-sm">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer" role="contentinfo" id="footer">
+  <p><strong>North East Regional Institute of Education (NERIE)</strong></p>
+  <p>Umiam Shillong - 7931013, Ri-Bhoi, Meghalaya, India</p>
+  <p>📞 0364-2570009 /24 /17 /82 | ✉️ nerie.shillong@ncert.nic.in</p>
+  <div>
+    <a href="https://www.facebook.com/nerie.shillong" target="_blank" rel="noopener" aria-label="Facebook" style="margin-right:15px;">
+      <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" alt="Facebook" />
+    </a>
+    <a href="https://x.com/nerie_ncert" target="_blank" rel="noopener" aria-label="Twitter" style="margin-right:15px;">
+      <img src="https://img.icons8.com/ios-filled/30/ffffff/twitter.png" alt="Twitter" />
+    </a>
+    <a href="https://www.youtube.com/@nerie-ncert_studio" target="_blank" rel="noopener" aria-label="YouTube" style="margin-right:15px;">
+      <img src="https://img.icons8.com/ios-filled/30/ffffff/youtube-play.png" alt="YouTube" />
+    </a>
+    <a href="https://www.instagram.com/nerieshlg/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+      <img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram" />
+    </a>
+  </div>
+  <small>© 2025 NERIE. All rights reserved.</small>
+</footer>
+
+<button id="backToTop" aria-label="Back to top" title="Back to top">&#8679;</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Back to top button
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 300) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+  btn.addEventListener('click', () => {
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+
+  // Tabs functionality
+  function showTab(id, btn) {
+    // Hide all tab contents
+    document.querySelectorAll('.ncert-tab-content').forEach(el => el.style.display = 'none');
+    // Remove active from all buttons
+    document.querySelectorAll('.tab-buttons .btn').forEach(el => {
+      el.classList.remove('active-tab');
+      el.classList.add('btn-light');
+      el.classList.remove('btn-outline-danger');
+    });
+    // Show selected content
+    document.getElementById(id).style.display = 'flex';
+    // Activate button
+    btn.classList.add('active-tab');
+    btn.classList.remove('btn-light');
+    btn.classList.add('btn-outline-danger');
+  }
+</script>
+<script>
+  // Optional but forces Bootstrap to re-initialize if needed
+  const tabElList = document.querySelectorAll('#pills-tab button')
+  tabElList.forEach(tabEl => {
+    tabEl.addEventListener('click', function (event) {
+      const tabTrigger = new bootstrap.Tab(tabEl)
+      tabTrigger.show()
+    })
+  })
+</script>
+
+</body>
+</html>
